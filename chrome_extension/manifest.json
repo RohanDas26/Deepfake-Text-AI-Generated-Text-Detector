@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "AI Text Detector (MLOps Edition)",
+  "version": "1.0",
+  "description": "Highlight text on any website and right-click to detect if it was written by AI.",
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
