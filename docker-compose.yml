@@ -1,0 +1,70 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - MLFLOW_TRACKING_URI=postgresql://mlflow:mlflow@postgres:5432/mlflow
+    depends_on:
+      - redis
+      - postgres
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  worker:
+    build: .
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - MLFLOW_TRACKING_URI=postgresql://mlflow:mlflow@postgres:5432/mlflow
+    depends_on:
+      - redis
+      - postgres
+    command: celery -A tasks worker --loglevel=info
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=mlflow
+      - POSTGRES_PASSWORD=mlflow
+      - POSTGRES_DB=mlflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mlflow:
+    image: python:3.10-slim
+    ports:
+      - "5000:5000"
+    environment:
+      - MLFLOW_TRACKING_URI=postgresql://mlflow:mlflow@postgres:5432/mlflow
+    depends_on:
+      - postgres
+    command: >
+      bash -c "pip install mlflow psycopg2-binary &&
+      mlflow server --backend-store-uri postgresql://mlflow:mlflow@postgres:5432/mlflow --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000"
+    volumes:
+      - mlflow_data:/app/mlruns
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+volumes:
+  postgres_data:
+  mlflow_data:

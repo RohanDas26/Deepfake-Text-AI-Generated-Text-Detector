@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+torch
+transformers
+nltk
+mlflow
+evidently
+numpy
+scikit-learn
+pandas
+celery
+redis
+prometheus-fastapi-instrumentator
+psycopg2-binary
+sentencepiece
+PyPDF2
+python-multipart

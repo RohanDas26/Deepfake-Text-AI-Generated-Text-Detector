@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Detection Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .metric-card { transition: all 0.3s ease; }
+        .metric-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); }
+        .tab-btn { padding: 0.5rem 1rem; border-radius: 0.5rem; transition: background 0.2s; font-weight: 600; }
+        .tab-btn.active { background: #3b82f6; color: white; }
+        .tab-btn.inactive { background: transparent; color: #94a3b8; }
+        .tab-btn.inactive:hover { background: rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="min-h-screen p-8">
+    <div class="max-w-6xl mx-auto space-y-8">
+        <!-- Header -->
+        <header class="text-center space-y-2">
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+                Enterprise AI Text Detection System
+            </h1>
+            <p class="text-slate-400">Cross-Domain Attribution & Bulk Document Analysis</p>
+        </header>
+
+        <div class="flex justify-center space-x-4 mb-4">
+            <button id="tabText" class="tab-btn active">Single Text Analysis</button>
+            <button id="tabDoc" class="tab-btn inactive">Batch Document Processing</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Input Section -->
+            <div class="glass-panel rounded-2xl p-6 space-y-4 relative">
+                
+                <!-- Text Mode -->
+                <div id="textMode">
+                    <h2 class="text-xl font-semibold mb-4">Input Text</h2>
+                    <textarea id="inputText" class="w-full h-64 bg-slate-800/50 border border-slate-700 rounded-xl p-4 text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Paste your text here..."></textarea>
+                    <button id="analyzeBtn" class="mt-4 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25 active:scale-[0.98]">
+                        Analyze Text
+                    </button>
+                </div>
+
+                <!-- Document Mode -->
+                <div id="docMode" class="hidden">
+                    <h2 class="text-xl font-semibold mb-4">Upload Document (PDF/TXT)</h2>
+                    <div class="border-2 border-dashed border-slate-600 rounded-xl p-10 text-center hover:border-blue-500 transition-colors">
+                        <input type="file" id="fileInput" accept=".pdf,.txt" class="hidden" />
+                        <label for="fileInput" class="cursor-pointer text-blue-400 hover:text-blue-300 font-semibold block mb-2">Click to browse or drag file here</label>
+                        <p class="text-sm text-slate-500" id="fileNameDisplay">No file selected</p>
+                    </div>
+                    <button id="analyzeDocBtn" class="mt-6 w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-purple-500/25 active:scale-[0.98] disabled:opacity-50" disabled>
+                        Process Document Batch
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Results Section -->
+            <div class="glass-panel rounded-2xl p-6 space-y-6 relative overflow-hidden min-h-[400px]">
+                <div id="loadingOverlay" class="absolute inset-0 bg-slate-900/80 backdrop-blur flex flex-col items-center justify-center hidden z-10">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
+                    <p class="text-blue-400 font-semibold animate-pulse" id="loadingText">Processing in background...</p>
+                </div>
+
+                <!-- Single Text Result -->
+                <div id="singleResultContainer">
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">Detection Result</h2>
+                        <div id="resultBadge" class="hidden inline-block px-4 py-2 rounded-lg text-lg font-bold border"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                            <div class="text-slate-400 text-sm mb-1">Confidence</div>
+                            <div id="confidenceVal" class="text-2xl font-bold text-white">--%</div>
+                        </div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                            <div class="text-slate-400 text-sm mb-1">Latency (ms)</div>
+                            <div id="latencyVal" class="text-2xl font-bold text-white">--</div>
+                        </div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                            <div class="text-slate-400 text-sm mb-1">Perplexity</div>
+                            <div id="pplVal" class="text-2xl font-bold text-blue-400">--</div>
+                        </div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
+                            <div class="text-slate-400 text-sm mb-1">Burstiness</div>
+                            <div id="burstVal" class="text-2xl font-bold text-emerald-400">--</div>
+                        </div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4 col-span-2">
+                            <div class="text-slate-400 text-sm mb-1">Type-Token Ratio (TTR)</div>
+                            <div id="ttrVal" class="text-2xl font-bold text-purple-400">--</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 border-t border-slate-700 pt-6">
+                        <h2 class="text-xl font-semibold mb-4">Attribution Inspector (XAI)</h2>
+                        <div id="attributionBox" class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 text-slate-200 leading-relaxed min-h-[100px] flex flex-wrap gap-x-1 gap-y-2 content-start">
+                            <span class="text-slate-500 italic">Run an analysis to view token attributions.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Result -->
+                <div id="docResultContainer" class="hidden">
+                    <h2 class="text-2xl font-bold mb-2">Document Analysis Report</h2>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="text-6xl font-bold text-purple-400" id="docAiScore">--%</div>
+                        <div class="text-slate-400">Overall AI Probability<br><span id="docTotalPara" class="text-white font-semibold">0</span> Paragraphs Processed</div>
+                    </div>
+                    
+                    <div class="flex space-x-4 mb-6 text-sm">
+                        <div class="bg-red-500/20 text-red-400 px-3 py-1 rounded border border-red-500/50"><span id="docAiCount">0</span> AI</div>
+                        <div class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded border border-yellow-500/50"><span id="docMixedCount">0</span> Mixed</div>
+                        <div class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded border border-emerald-500/50"><span id="docHumanCount">0</span> Human</div>
+                    </div>
+
+                    <h3 class="font-semibold text-lg mb-3">Paragraph Breakdown</h3>
+                    <div id="docParagraphList" class="space-y-4 max-h-[400px] overflow-y-auto pr-2">
+                        <!-- Paragraph items go here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // TABS
+        const tabText = document.getElementById('tabText');
+        const tabDoc = document.getElementById('tabDoc');
+        const textMode = document.getElementById('textMode');
+        const docMode = document.getElementById('docMode');
+        const singleResultContainer = document.getElementById('singleResultContainer');
+        const docResultContainer = document.getElementById('docResultContainer');
+        
+        let currentMode = 'text';
+
+        tabText.addEventListener('click', () => {
+            currentMode = 'text';
+            tabText.className = 'tab-btn active';
+            tabDoc.className = 'tab-btn inactive';
+            textMode.classList.remove('hidden');
+            docMode.classList.add('hidden');
+            singleResultContainer.classList.remove('hidden');
+            docResultContainer.classList.add('hidden');
+        });
+
+        tabDoc.addEventListener('click', () => {
+            currentMode = 'doc';
+            tabDoc.className = 'tab-btn active';
+            tabText.className = 'tab-btn inactive';
+            docMode.classList.remove('hidden');
+            textMode.classList.add('hidden');
+            docResultContainer.classList.remove('hidden');
+            singleResultContainer.classList.add('hidden');
+        });
+
+        // FILE UPLOAD
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.getElementById('fileNameDisplay');
+        const analyzeDocBtn = document.getElementById('analyzeDocBtn');
+        let selectedFile = null;
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                selectedFile = e.target.files[0];
+                fileNameDisplay.textContent = selectedFile.name;
+                analyzeDocBtn.disabled = false;
+            } else {
+                selectedFile = null;
+                fileNameDisplay.textContent = "No file selected";
+                analyzeDocBtn.disabled = true;
+            }
+        });
+
+        // POLLING
+        async function pollResult(taskId) {
+            while (true) {
+                const res = await fetch(`/predict/result/${taskId}`);
+                const data = await res.json();
+                if (data.status === 'SUCCESS') return data.result;
+                if (data.status === 'FAILURE') throw new Error(data.result.error || "Task failed");
+                await new Promise(r => setTimeout(r, 1000));
+            }
+        }
+
+        const loadingOverlay = document.getElementById('loadingOverlay');
+
+        // TEXT ANALYSIS
+        document.getElementById('analyzeBtn').addEventListener('click', async () => {
+            const text = document.getElementById('inputText').value.trim();
+            if (!text) return;
+            
+            loadingOverlay.classList.remove('hidden');
+            document.getElementById('resultBadge').classList.add('hidden');
+
+            try {
+                const res = await fetch('/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text })
+                });
+                const { task_id } = await res.json();
+                const data = await pollResult(task_id);
+
+                // Update Single Result UI
+                const badge = document.getElementById('resultBadge');
+                badge.textContent = data.label;
+                badge.className = 'inline-block px-4 py-2 rounded-lg text-lg font-bold border ';
+                if (data.label.includes("AI-GENERATED")) badge.className += 'bg-red-500/20 text-red-400 border-red-500/50';
+                else if (data.label.includes("HUMAN")) badge.className += 'bg-emerald-500/20 text-emerald-400 border-emerald-500/50';
+                else badge.className += 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
+                badge.classList.remove('hidden');
+
+                document.getElementById('confidenceVal').textContent = (data.confidence * 100).toFixed(1) + '%';
+                document.getElementById('latencyVal').textContent = data.performance.latency_ms.toFixed(1);
+                document.getElementById('pplVal').textContent = data.metrics.perplexity.toFixed(2);
+                document.getElementById('burstVal').textContent = data.metrics.burstiness.toFixed(2);
+                document.getElementById('ttrVal').textContent = data.metrics.ttr.toFixed(2);
+
+                const attributionBox = document.getElementById('attributionBox');
+                attributionBox.innerHTML = '';
+                if (data.token_attributions?.length > 0) {
+                    data.token_attributions.forEach(obj => {
+                        const span = document.createElement('span');
+                        span.textContent = obj.word;
+                        span.className = 'px-1 rounded cursor-pointer transition-colors ' + 
+                            (obj.score > 0 ? 'bg-red-500/30 text-red-300 hover:bg-red-500/50' : 'bg-emerald-500/30 text-emerald-300 hover:bg-emerald-500/50');
+                        span.title = `Score: ${obj.score.toFixed(4)}`;
+                        attributionBox.appendChild(span);
+                    });
+                }
+            } catch (err) {
+                alert("Analysis failed.");
+            } finally {
+                loadingOverlay.classList.add('hidden');
+            }
+        });
+
+        // DOCUMENT ANALYSIS
+        analyzeDocBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+            loadingOverlay.classList.remove('hidden');
+            
+            try {
+                const formData = new FormData();
+                formData.append("file", selectedFile);
+                
+                const res = await fetch('/predict/document', { method: 'POST', body: formData });
+                if (!res.ok) throw new Error("Upload failed");
+                
+                const { task_id } = await res.json();
+                const data = await pollResult(task_id);
+
+                if (data.error) throw new Error(data.error);
+
+                // Render Document Report
+                document.getElementById('docAiScore').textContent = data.overall_ai_score + '%';
+                document.getElementById('docTotalPara').textContent = data.total_paragraphs;
+                document.getElementById('docAiCount').textContent = data.ai_paragraphs;
+                document.getElementById('docMixedCount').textContent = data.mixed_paragraphs;
+                document.getElementById('docHumanCount').textContent = data.human_paragraphs;
+
+                const list = document.getElementById('docParagraphList');
+                list.innerHTML = '';
+                data.paragraph_details.forEach(p => {
+                    const div = document.createElement('div');
+                    div.className = "bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-sm space-y-2";
+                    
+                    let color = p.label.includes("AI") ? "text-red-400" : (p.label.includes("HUMAN") ? "text-emerald-400" : "text-yellow-400");
+                    
+                    div.innerHTML = `
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold ${color} border border-current px-2 py-0.5 rounded text-xs">${p.label} (${(p.confidence*100).toFixed(0)}%)</span>
+                            <span class="text-slate-500 text-xs">PPL: ${p.perplexity} | Burst: ${p.burstiness}</span>
+                        </div>
+                        <p class="text-slate-300">${p.text}</p>
+                    `;
+                    list.appendChild(div);
+                });
+
+            } catch (err) {
+                alert("Document analysis failed: " + err.message);
+            } finally {
+                loadingOverlay.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
