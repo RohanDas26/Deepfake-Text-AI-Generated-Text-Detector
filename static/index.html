@@ -51,14 +51,14 @@
 
                 <!-- Document Mode -->
                 <div id="docMode" class="hidden">
-                    <h2 class="text-xl font-semibold mb-4">Upload Document (PDF/TXT)</h2>
+                    <h2 class="text-xl font-semibold mb-4">Upload Document (PDF/DOCX/TXT)</h2>
                     <div class="border-2 border-dashed border-slate-600 rounded-xl p-10 text-center hover:border-blue-500 transition-colors">
-                        <input type="file" id="fileInput" accept=".pdf,.txt" class="hidden" />
+                        <input type="file" id="fileInput" accept=".pdf,.txt,.docx" class="hidden" />
                         <label for="fileInput" class="cursor-pointer text-blue-400 hover:text-blue-300 font-semibold block mb-2">Click to browse or drag file here</label>
                         <p class="text-sm text-slate-500" id="fileNameDisplay">No file selected</p>
                     </div>
                     <button id="analyzeDocBtn" class="mt-6 w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-purple-500/25 active:scale-[0.98] disabled:opacity-50" disabled>
-                        Process Document Batch
+                        Run Parallel MapReduce Batch
                     </button>
                 </div>
 
@@ -68,7 +68,7 @@
             <div class="glass-panel rounded-2xl p-6 space-y-6 relative overflow-hidden min-h-[400px]">
                 <div id="loadingOverlay" class="absolute inset-0 bg-slate-900/80 backdrop-blur flex flex-col items-center justify-center hidden z-10">
                     <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
-                    <p class="text-blue-400 font-semibold animate-pulse" id="loadingText">Processing in background...</p>
+                    <p class="text-blue-400 font-semibold animate-pulse" id="loadingText">Distributing tasks to Celery workers...</p>
                 </div>
 
                 <!-- Single Text Result -->
@@ -111,10 +111,16 @@
 
                 <!-- Document Result -->
                 <div id="docResultContainer" class="hidden">
-                    <h2 class="text-2xl font-bold mb-2">Document Analysis Report</h2>
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 class="text-2xl font-bold">Document Analysis Report</h2>
+                        <button id="downloadCsvBtn" class="bg-slate-700 hover:bg-slate-600 text-xs px-3 py-1.5 rounded transition-colors hidden">
+                            Download CSV
+                        </button>
+                    </div>
+                    
                     <div class="flex items-center space-x-4 mb-6">
                         <div class="text-6xl font-bold text-purple-400" id="docAiScore">--%</div>
-                        <div class="text-slate-400">Overall AI Probability<br><span id="docTotalPara" class="text-white font-semibold">0</span> Paragraphs Processed</div>
+                        <div class="text-slate-400">Overall AI Probability<br><span id="docTotalPara" class="text-white font-semibold">0</span> Sliding Windows Analyzed</div>
                     </div>
                     
                     <div class="flex space-x-4 mb-6 text-sm">
@@ -123,7 +129,7 @@
                         <div class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded border border-emerald-500/50"><span id="docHumanCount">0</span> Human</div>
                     </div>
 
-                    <h3 class="font-semibold text-lg mb-3">Paragraph Breakdown</h3>
+                    <h3 class="font-semibold text-lg mb-3">Sliding Window Breakdown</h3>
                     <div id="docParagraphList" class="space-y-4 max-h-[400px] overflow-y-auto pr-2">
                         <!-- Paragraph items go here -->
                     </div>
@@ -200,6 +206,7 @@
             const text = document.getElementById('inputText').value.trim();
             if (!text) return;
             
+            document.getElementById('loadingText').textContent = "Processing...";
             loadingOverlay.classList.remove('hidden');
             document.getElementById('resultBadge').classList.add('hidden');
 
@@ -247,9 +254,14 @@
         });
 
         // DOCUMENT ANALYSIS
+        let latestDocData = null;
+        const downloadCsvBtn = document.getElementById('downloadCsvBtn');
+
         analyzeDocBtn.addEventListener('click', async () => {
             if (!selectedFile) return;
+            document.getElementById('loadingText').textContent = "Distributing MapReduce tasks to Celery workers...";
             loadingOverlay.classList.remove('hidden');
+            downloadCsvBtn.classList.add('hidden');
             
             try {
                 const formData = new FormData();
@@ -262,6 +274,8 @@
                 const data = await pollResult(task_id);
 
                 if (data.error) throw new Error(data.error);
+                
+                latestDocData = data.paragraph_details;
 
                 // Render Document Report
                 document.getElementById('docAiScore').textContent = data.overall_ai_score + '%';
@@ -287,12 +301,36 @@
                     `;
                     list.appendChild(div);
                 });
+                
+                downloadCsvBtn.classList.remove('hidden');
 
             } catch (err) {
                 alert("Document analysis failed: " + err.message);
             } finally {
                 loadingOverlay.classList.add('hidden');
             }
+        });
+
+        // CSV EXPORT
+        downloadCsvBtn.addEventListener('click', () => {
+            if (!latestDocData) return;
+            
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "Label,Confidence,Perplexity,Burstiness,Text\n";
+            
+            latestDocData.forEach(row => {
+                let cleanText = row.text.replace(/"/g, '""'); // Escape quotes
+                let rowStr = `"${row.label}",${row.confidence},${row.perplexity},${row.burstiness},"${cleanText}"`;
+                csvContent += rowStr + "\r\n";
+            });
+            
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "AI_Analysis_Report.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     </script>
 </body>

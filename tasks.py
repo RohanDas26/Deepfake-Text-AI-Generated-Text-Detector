@@ -144,77 +144,75 @@ def run_inference(text: str):
     
     return result
 
-@celery_app.task(name="run_document_inference")
-def run_document_inference(full_text: str):
+@celery_app.task(name="analyze_chunk")
+def analyze_chunk(chunk_text: str):
     """
-    Splits a long document into paragraphs, runs inference on each,
-    and calculates an aggregate AI score.
+    Worker task to analyze a single chunk of text.
+    Designed to be run in parallel across multiple workers.
     """
-    paragraphs = [p.strip() for p in full_text.split('\n') if len(p.strip()) > 30]
+    nlp, mdl, tok = load_models()
+    features_np = nlp.extract_features(chunk_text)
+    features_tensor = torch.tensor([features_np], dtype=torch.float32)
+    inputs = tok(chunk_text, return_tensors="pt", max_length=512, truncation=True, padding=True)
     
-    if not paragraphs:
-        return {"error": "No valid text found in document."}
+    with torch.no_grad():
+        logits = mdl(inputs["input_ids"], inputs["attention_mask"], features_tensor)
+        probs = F.softmax(logits, dim=1)
+        conf, pred_idx = torch.max(probs, dim=1)
         
-    results = []
+    pred_idx_val = pred_idx.item()
+    confidence = conf.item()
+    
+    ttr = float(features_np[2])
+    ppl = float(features_np[0])
+    sentences = nltk.sent_tokenize(chunk_text)
+    
+    # Heuristics
+    if ppl > 500.0:
+        pred_idx_val = 0
+        confidence = 0.99
+    elif len(sentences) <= 1:
+        if ttr > 0.85 and pred_idx_val == 2:
+            pred_idx_val = 0
+            confidence = 0.80
+        elif ttr >= 0.95 and ppl < 50.0 and pred_idx_val == 1:
+            pred_idx_val = 0
+            confidence = 0.85
+            
+    label = LABELS[pred_idx_val]
+    
+    return {
+        "text": chunk_text,
+        "label": label,
+        "confidence": confidence,
+        "perplexity": round(ppl, 2),
+        "burstiness": round(float(features_np[1]), 2),
+        "pred_idx": pred_idx_val
+    }
+
+@celery_app.task(name="aggregate_document")
+def aggregate_document(chunk_results):
+    """
+    Reducer task: Takes the results from all parallel chunk tasks
+    and calculates the final aggregate report.
+    """
     ai_count = 0
     human_count = 0
     mixed_count = 0
     
-    for p in paragraphs:
-        # We reuse the synchronous logic from run_inference but skip MLflow/Drift logging for each sub-paragraph
-        # to avoid spamming the tracker, or we could call a helper. 
-        # For simplicity, we call the run_inference task directly as a function.
-        # Wait, run_inference is a celery task. We can call it directly as a normal python function by using its underlying function,
-        # but it contains mlflow logging. That's fine.
-        
-        # Actually, let's just write a helper or do it directly.
-        nlp, mdl, tok = load_models()
-        features_np = nlp.extract_features(p)
-        features_tensor = torch.tensor([features_np], dtype=torch.float32)
-        inputs = tok(p, return_tensors="pt", max_length=512, truncation=True, padding=True)
-        
-        with torch.no_grad():
-            logits = mdl(inputs["input_ids"], inputs["attention_mask"], features_tensor)
-            probs = F.softmax(logits, dim=1)
-            conf, pred_idx = torch.max(probs, dim=1)
-            
-        pred_idx_val = pred_idx.item()
-        confidence = conf.item()
-        
-        # Heuristics
-        ttr = float(features_np[2])
-        ppl = float(features_np[0])
-        sentences = nltk.sent_tokenize(p)
-        
-        if ppl > 500.0:
-            pred_idx_val = 0
-            confidence = 0.99
-        elif len(sentences) <= 1:
-            if ttr > 0.85 and pred_idx_val == 2:
-                pred_idx_val = 0
-                confidence = 0.80
-            elif ttr >= 0.95 and ppl < 50.0 and pred_idx_val == 1:
-                pred_idx_val = 0
-                confidence = 0.85
-                
-        label = LABELS[pred_idx_val]
-        
-        if pred_idx_val == 1:
+    for res in chunk_results:
+        idx = res.pop("pred_idx", 0)
+        if idx == 1:
             ai_count += 1
-        elif pred_idx_val == 0:
+        elif idx == 0:
             human_count += 1
         else:
             mixed_count += 1
             
-        results.append({
-            "text": p,
-            "label": label,
-            "confidence": confidence,
-            "perplexity": round(ppl, 2),
-            "burstiness": round(float(features_np[1]), 2)
-        })
+    total = len(chunk_results)
+    if total == 0:
+        return {"error": "No results to aggregate."}
         
-    total = len(results)
     ai_percentage = (ai_count + (mixed_count * 0.5)) / total * 100
     
     return {
@@ -223,5 +221,5 @@ def run_document_inference(full_text: str):
         "ai_paragraphs": ai_count,
         "human_paragraphs": human_count,
         "mixed_paragraphs": mixed_count,
-        "paragraph_details": results
+        "paragraph_details": chunk_results
     }
