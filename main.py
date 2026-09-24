@@ -16,6 +16,7 @@ from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
 import os
+from fastapi.middleware.cors import CORSMiddleware
 
 from tasks import celery_app, run_inference, analyze_chunk, aggregate_document
 
@@ -23,6 +24,15 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="AI Text Detection System - MLOps Edition")
+
+# Allow Chrome Extension to make requests from any website
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Initialize Prometheus Instrumentator
 Instrumentator().instrument(app).expose(app, endpoint="/metrics")
