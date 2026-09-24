@@ -73,8 +73,15 @@
 
                 <!-- Single Text Result -->
                 <div id="singleResultContainer">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold">Detection Result</h2>
+                        <div id="feedbackContainer" class="hidden flex items-center space-x-2 text-sm">
+                            <span class="text-slate-400">Is this correct?</span>
+                            <button id="btnCorrect" class="text-emerald-400 hover:bg-emerald-500/20 px-2 py-1 rounded transition-colors">Yes</button>
+                            <button id="btnIncorrect" class="text-red-400 hover:bg-red-500/20 px-2 py-1 rounded transition-colors">No (Flag)</button>
+                        </div>
+                    </div>
                     <div>
-                        <h2 class="text-xl font-semibold mb-4">Detection Result</h2>
                         <div id="resultBadge" class="hidden inline-block px-4 py-2 rounded-lg text-lg font-bold border"></div>
                     </div>
 
@@ -246,10 +253,47 @@
                         attributionBox.appendChild(span);
                     });
                 }
+                
+                // Show feedback options
+                document.getElementById('feedbackContainer').classList.remove('hidden');
+                document.getElementById('feedbackContainer').dataset.originalPrediction = data.label;
+                document.getElementById('feedbackContainer').dataset.text = text;
+
             } catch (err) {
                 alert("Analysis failed.");
             } finally {
                 loadingOverlay.classList.add('hidden');
+            }
+        });
+
+        // FEEDBACK LOGIC
+        document.getElementById('btnCorrect').addEventListener('click', () => {
+            document.getElementById('feedbackContainer').innerHTML = '<span class="text-emerald-400">Thank you for validating!</span>';
+        });
+
+        document.getElementById('btnIncorrect').addEventListener('click', async () => {
+            const container = document.getElementById('feedbackContainer');
+            const original = container.dataset.originalPrediction;
+            const text = container.dataset.text;
+            
+            // If it predicted AI, user implies Human, and vice versa
+            let correction = original.includes("AI") ? "HUMAN-WRITTEN" : "FULLY AI-GENERATED";
+            
+            container.innerHTML = '<span class="text-blue-400">Submitting feedback...</span>';
+            
+            try {
+                await fetch('/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        text: text,
+                        original_prediction: original,
+                        user_correction: correction
+                    })
+                });
+                container.innerHTML = '<span class="text-emerald-400">Flagged! Added to Active Learning DB.</span>';
+            } catch (e) {
+                container.innerHTML = '<span class="text-red-400">Failed to log feedback.</span>';
             }
         });
 

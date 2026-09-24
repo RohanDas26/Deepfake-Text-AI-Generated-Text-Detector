@@ -12,6 +12,10 @@ import PyPDF2
 import docx
 import io
 import nltk
+from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
+from sqlalchemy.orm import declarative_base, sessionmaker
+from datetime import datetime
+import os
 
 from tasks import celery_app, run_inference, analyze_chunk, aggregate_document
 
@@ -22,6 +26,31 @@ app = FastAPI(title="AI Text Detection System - MLOps Edition")
 
 # Initialize Prometheus Instrumentator
 Instrumentator().instrument(app).expose(app, endpoint="/metrics")
+
+# Database Configuration for Active Learning
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://mlflow:mlflow@postgres:5432/mlflow")
+# Fallback to sqlite if postgres is not available (e.g. running locally without docker)
+if "postgres" not in DATABASE_URL:
+    DATABASE_URL = "sqlite:///./feedback.db"
+    
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+class FeedbackLog(Base):
+    __tablename__ = "active_learning_feedback"
+    id = Column(Integer, primary_key=True, index=True)
+    text_snippet = Column(Text, nullable=False)
+    original_prediction = Column(String(50), nullable=False)
+    user_correction = Column(String(50), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+Base.metadata.create_all(bind=engine)
+
+class FeedbackRequest(BaseModel):
+    text: str
+    original_prediction: str
+    user_correction: str
 
 class PredictRequest(BaseModel):
     text: str
@@ -126,6 +155,30 @@ async def get_predict_result(task_id: str):
         response["result"] = {"error": str(task_result.result)}
         
     return response
+
+@app.post("/feedback")
+async def submit_feedback(feedback: FeedbackRequest):
+    """
+    Endpoint for Active Learning Feedback Loop.
+    Users can flag a prediction as incorrect and provide the true label.
+    This stores it in the PostgreSQL database for future model retraining.
+    """
+    db = SessionLocal()
+    try:
+        new_feedback = FeedbackLog(
+            text_snippet=feedback.text,
+            original_prediction=feedback.original_prediction,
+            user_correction=feedback.user_correction
+        )
+        db.add(new_feedback)
+        db.commit()
+        return {"message": "Feedback successfully logged for Active Learning retraining loop."}
+    except Exception as e:
+        db.rollback()
+        logger.error(f"Failed to log feedback: {e}")
+        raise HTTPException(status_code=500, detail="Database error while saving feedback.")
+    finally:
+        db.close()
 
 # Serve static dashboard
 app.mount("/static", StaticFiles(directory="static"), name="static")

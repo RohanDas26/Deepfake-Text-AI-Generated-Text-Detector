@@ -16,3 +16,4 @@ sentencepiece
 PyPDF2
 python-multipart
 python-docx
+SQLAlchemy
