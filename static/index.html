@@ -85,11 +85,26 @@
                         <div id="resultBadge" class="hidden inline-block px-4 py-2 rounded-lg text-lg font-bold border"></div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 mt-6">
-                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
-                            <div class="text-slate-400 text-sm mb-1">Confidence</div>
-                            <div id="confidenceVal" class="text-2xl font-bold text-white">--%</div>
+                    <!-- Ensemble Comparison UI -->
+                    <div id="ensembleComparison" class="hidden grid grid-cols-3 gap-4 mt-6">
+                        <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 text-center">
+                            <div class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-2">Model A (DeBERTa)</div>
+                            <div id="modelADetect" class="text-lg font-bold text-white mb-1">--</div>
+                            <div id="modelAConf" class="text-sm text-slate-400">--% Confidence</div>
                         </div>
+                        <div class="bg-purple-500/10 border border-purple-500/30 rounded-xl p-4 text-center">
+                            <div class="text-purple-400 text-xs font-semibold uppercase tracking-wider mb-2">Model B (Random Forest)</div>
+                            <div id="modelBDetect" class="text-lg font-bold text-white mb-1">--</div>
+                            <div id="modelBConf" class="text-sm text-slate-400">--% Confidence</div>
+                        </div>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 text-center">
+                            <div class="text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-2">Hybrid Ensemble</div>
+                            <div id="ensembleDetect" class="text-lg font-bold text-white mb-1">--</div>
+                            <div id="ensembleConf" class="text-sm text-slate-400">--% Confidence</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-6">
                         <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
                             <div class="text-slate-400 text-sm mb-1">Latency (ms)</div>
                             <div id="latencyVal" class="text-2xl font-bold text-white">--</div>
@@ -102,7 +117,7 @@
                             <div class="text-slate-400 text-sm mb-1">Burstiness</div>
                             <div id="burstVal" class="text-2xl font-bold text-emerald-400">--</div>
                         </div>
-                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4 col-span-2">
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
                             <div class="text-slate-400 text-sm mb-1">Type-Token Ratio (TTR)</div>
                             <div id="ttrVal" class="text-2xl font-bold text-purple-400">--</div>
                         </div>
@@ -235,7 +250,26 @@
                 else badge.className += 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
                 badge.classList.remove('hidden');
 
-                document.getElementById('confidenceVal').textContent = (data.confidence * 100).toFixed(1) + '%';
+                // Populate Ensemble UI
+                document.getElementById('ensembleComparison').classList.remove('hidden');
+                
+                // Model A (DeBERTa)
+                let debertaLabel = "Mixed/Unknown";
+                if (data.metrics.deberta_conf > 0.5) debertaLabel = data.label; // Simple heuristic for UI display
+                document.getElementById('modelADetect').textContent = debertaLabel;
+                document.getElementById('modelAConf').textContent = (data.metrics.deberta_conf * 100).toFixed(1) + '% Confidence';
+                
+                // Model B (RF)
+                let rfLabel = "Mixed/Unknown";
+                if (data.metrics.rf_conf > 0.5) rfLabel = data.label; 
+                document.getElementById('modelBDetect').textContent = rfLabel;
+                document.getElementById('modelBConf').textContent = (data.metrics.rf_conf * 100).toFixed(1) + '% Confidence';
+
+                // Ensemble
+                document.getElementById('ensembleDetect').textContent = data.label;
+                document.getElementById('ensembleDetect').className = 'text-lg font-bold mb-1 ' + (data.label.includes("AI") ? "text-red-400" : "text-emerald-400");
+                document.getElementById('ensembleConf').textContent = (data.confidence * 100).toFixed(1) + '% Confidence';
+
                 document.getElementById('latencyVal').textContent = data.performance.latency_ms.toFixed(1);
                 document.getElementById('pplVal').textContent = data.metrics.perplexity.toFixed(2);
                 document.getElementById('burstVal').textContent = data.metrics.burstiness.toFixed(2);

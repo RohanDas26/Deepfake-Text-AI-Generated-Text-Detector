@@ -31,41 +31,54 @@ LABELS = {
 nlp_engine = None
 model = None
 tokenizer = None
+rf_model = None
 
 def load_models():
-    global nlp_engine, model, tokenizer
+    global nlp_engine, model, tokenizer, rf_model
     if nlp_engine is None:
         import logging
+        import pickle
         logging.info("Initializing models in Celery worker...")
         nlp_engine = NLPEngine()
         model = get_model()
         tokenizer = get_tokenizer()
-    return nlp_engine, model, tokenizer
+        try:
+            with open("rf_model.pkl", "rb") as f:
+                rf_model = pickle.load(f)
+        except Exception as e:
+            logging.error(f"Could not load Random Forest model: {e}")
+            rf_model = None
+    return nlp_engine, model, tokenizer, rf_model
 
 @celery_app.task(name="run_inference")
 def run_inference(text: str):
     start_time = time.perf_counter()
     
-    nlp, mdl, tok = load_models()
+    nlp, mdl, tok, rf = load_models()
     
     # NLP Engine Feature Extraction
     features_np = nlp.extract_features(text)
     features_tensor = torch.tensor([features_np], dtype=torch.float32)
     
-    # Tokenize for Contextual Branch
+    # Model A: DeBERTa (Deep Learning)
     inputs = tok(text, return_tensors="pt", max_length=512, truncation=True, padding=True)
-    
-    # Inference
     with torch.no_grad():
         logits = mdl(inputs["input_ids"], inputs["attention_mask"], features_tensor)
-        probs = F.softmax(logits, dim=1)
-        conf, pred_idx = torch.max(probs, dim=1)
+        probs_dl = F.softmax(logits, dim=1).numpy()[0]
         
-    # Extract XAI Attributions
+    # Model B: Random Forest (Statistical ML)
+    if rf is not None:
+        probs_ml = rf.predict_proba([features_np])[0]
+    else:
+        probs_ml = probs_dl # Fallback
+        
+    # Ensemble: Weighted Average (60% DeBERTa, 40% RF)
+    ensemble_probs = (probs_dl * 0.6) + (probs_ml * 0.4)
+    pred_idx_val = int(np.argmax(ensemble_probs))
+    confidence = float(np.max(ensemble_probs))
+        
+    # Extract XAI Attributions (Using DL model only)
     attributions = extract_attributions(mdl, tok, text, features_tensor)
-        
-    pred_idx_val = pred_idx.item()
-    confidence = conf.item()
     
     sentences = nltk.sent_tokenize(text)
     ttr = float(features_np[2])
@@ -90,7 +103,9 @@ def run_inference(text: str):
     metrics_dict = {
         "perplexity": float(features_np[0]),
         "burstiness": float(features_np[1]),
-        "ttr": float(features_np[2])
+        "ttr": float(features_np[2]),
+        "deberta_conf": float(np.max(probs_dl)),
+        "rf_conf": float(np.max(probs_ml))
     }
     
     # Log to MLflow
@@ -148,36 +163,36 @@ def run_inference(text: str):
 def analyze_chunk(chunk_text: str):
     """
     Worker task to analyze a single chunk of text.
-    Designed to be run in parallel across multiple workers.
+    Runs both DeBERTa and Random Forest (Ensemble).
     """
-    nlp, mdl, tok = load_models()
+    nlp, mdl, tok, rf = load_models()
     features_np = nlp.extract_features(chunk_text)
     features_tensor = torch.tensor([features_np], dtype=torch.float32)
-    inputs = tok(chunk_text, return_tensors="pt", max_length=512, truncation=True, padding=True)
     
+    # Model A: DeBERTa (Deep Learning)
+    inputs = tok(chunk_text, return_tensors="pt", max_length=512, truncation=True, padding=True)
     with torch.no_grad():
         logits = mdl(inputs["input_ids"], inputs["attention_mask"], features_tensor)
-        probs = F.softmax(logits, dim=1)
-        conf, pred_idx = torch.max(probs, dim=1)
+        probs_dl = F.softmax(logits, dim=1).numpy()[0]
         
-    pred_idx_val = pred_idx.item()
-    confidence = conf.item()
+    # Model B: Random Forest (Statistical ML)
+    if rf is not None:
+        probs_ml = rf.predict_proba([features_np])[0]
+    else:
+        probs_ml = probs_dl # Fallback
+        
+    # Ensemble: Weighted Average (60% DeBERTa, 40% RF)
+    ensemble_probs = (probs_dl * 0.6) + (probs_ml * 0.4)
+    pred_idx_val = int(np.argmax(ensemble_probs))
+    confidence = float(np.max(ensemble_probs))
     
     ttr = float(features_np[2])
     ppl = float(features_np[0])
-    sentences = nltk.sent_tokenize(chunk_text)
     
-    # Heuristics
+    # Heuristics Overrides
     if ppl > 500.0:
         pred_idx_val = 0
         confidence = 0.99
-    elif len(sentences) <= 1:
-        if ttr > 0.85 and pred_idx_val == 2:
-            pred_idx_val = 0
-            confidence = 0.80
-        elif ttr >= 0.95 and ppl < 50.0 and pred_idx_val == 1:
-            pred_idx_val = 0
-            confidence = 0.85
             
     label = LABELS[pred_idx_val]
     
@@ -187,7 +202,9 @@ def analyze_chunk(chunk_text: str):
         "confidence": confidence,
         "perplexity": round(ppl, 2),
         "burstiness": round(float(features_np[1]), 2),
-        "pred_idx": pred_idx_val
+        "pred_idx": pred_idx_val,
+        "deberta_conf": float(np.max(probs_dl)),
+        "rf_conf": float(np.max(probs_ml))
     }
 
 @celery_app.task(name="aggregate_document")

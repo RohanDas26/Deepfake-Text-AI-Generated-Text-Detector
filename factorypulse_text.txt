@@ -1,0 +1,107 @@
+FactoryPulse: Intelligent Network Monitoring and Dynamic Threat Mitigation using VLANs, ACLs and Deep Learning
+Team MembersRohan Das (2420080057)Sai Praneetha Oruganty (2420080061)Dhamini Nalluri (2420080022)
+1
+Problem Statement
+Modern IoT networks contain devices with different roles, communication patterns and security requirements.
+A compromised IoT endpoint can attempt unauthorized communication with other network segments.
+Static VLAN and ACL configurations provide segmentation, but do not analyze the behavior of individual endpoints. 
+Rule-based filtering may not identify abnormal behavior that develops after a device has been compromised. 
+Manual investigation and access-rule modification can delay the isolation of a suspicious endpoint. 
+
+Project Challenge:
+Detect abnormal endpoint behavior and use the detected threat information to generate targeted network controls.
+2
+Objectives
+Design a segmented IoT network using VLANs for logical isolation. 
+Control communication between network segments using IPv4 ACLs. 
+Generate synthetic network and sensor telemetry using Python. 
+Detect abnormal endpoint behavior using a Deep Learning Autoencoder. 
+Classify detected anomalies using a Random Forest model. 
+Generate targeted ACL rules for suspicious endpoints. 
+Verify traffic restriction using Cisco Packet Tracer.
+3
+Existing System
+Conventional IoT Network Security
+IoT Devices → VLANs → Inter-VLAN Routing → Static ACLs → Administrator
+Current Approach:
+• VLANs provide logical separation between different device groups. 
+• Inter-VLAN routing enables communication between required network segments. 
+• IPv4 ACLs define which traffic is permitted or denied. 
+• Security rules are configured in advance based on expected communication requirements. 
+• When abnormal activity is observed, the administrator must investigate the endpoint and modify the network policy.
+Limitations 
+• Static security policies 
+• No behavioral anomaly detection 
+• Limited visibility into compromised endpoints 
+• Manual isolation and policy modification 
+Key Gap:
+The network can control traffic, but it does not independently identify abnormal endpoint behavior and initiate targeted mitigation.
+4
+Proposed System
+
+5
+System Architecture
+NETWORK LAYER
+• Sensor VLAN: Telemetry endpoints
+• Controller VLAN: Control systems
+• Admin VLAN: Management nodes
+TELEMETRY LAYER
+• Physical Metrics:
+Temp & Vibration
+• Network Metrics:
+Packet rate tracking
+• Connection Activity:
+Session state logs
+INTELLIGENCE LAYER
+• Autoencoder: Learns baseline & flags anomalies
+• Random Forest: Classifies attack types
+MITIGATION LAYER
+• Threat Action: Triggers ACLs
+• Cisco IOS: Generates rules
+• Validation: Packet Tracer test
+6
+Methodology
+Network Design Configure VLANs, IP addressing, inter-VLAN routing and baseline IPv4 ACL policies in Cisco Packet Tracer. 
+Telemetry Simulation Generate synthetic network and sensor-related features representing normal and abnormal endpoint behavior. 
+Data Preparation Clean, structure and normalize the generated dataset for model training and inference. 
+Anomaly Detection Train a Deep Learning Autoencoder using normal behavior and identify deviations using reconstruction error. 
+Attack Classification Use a Random Forest classifier to categorize detected anomalies into predefined attack classes. 
+Policy Generation Generate a targeted Cisco IOS ACL command based on the identified suspicious endpoint. 
+Verification Apply the generated rule in Packet Tracer and verify whether the targeted traffic is restricted.
+7
+Technologies & Tools
+Computer Networking 
+• Cisco Packet Tracer 
+• VLANs and 802.1Q trunking 
+• Inter-VLAN Routing 
+• DHCP 
+• IPv4 Extended ACLs AI / Machine Learning 
+Deep Learning Autoencoder 
+• Reconstruction Error 
+• Random Forest Classifier 
+• PyTorch / Keras 
+• Scikit-learn 
+Development Visualization 
+• Python 
+• NumPy 
+• Pandas 
+• Streamlit
+8
+Expected Outcome & Future Scope
+The project is expected to demonstrate: 
+• Logical isolation of IoT device groups using VLANs. 
+• Controlled communication between network segments using IPv4 ACL policies. 
+• Identification of abnormal endpoint behavior using reconstruction-based anomaly detection.
+• Classification of predefined attack patterns using supervised machine learning. 
+• Generation of targeted ACL rules for suspicious endpoints. 
+• Verification of traffic restriction in a simulated Cisco Packet Tracer environment. 
+Future Scope: 
+• Real-time network telemetry collection 
+• Automated router/firewall integration 
+• Physical IoT device integration 
+• Additional attack categories 
+• Continuous model retraining 
+• Evaluation on larger and more diverse network environments
+9
+Thank You
+10
