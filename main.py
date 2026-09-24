@@ -86,13 +86,13 @@ async def predict(request: PredictRequest):
 def get_sliding_chunks(text: str, window_size=3, step=2):
     """
     Intelligently chunks text into overlapping sentence windows.
+    Uses regex-based sentence splitting to avoid NLTK dependency in the web container.
     """
-    try:
-        nltk.data.find('tokenizers/punkt')
-    except LookupError:
-        nltk.download('punkt')
-        
-    sentences = nltk.sent_tokenize(text)
+    import re
+    # Regex-based sentence splitting (works without NLTK punkt data)
+    sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+    sentences = [s.strip() for s in sentences if len(s.strip()) > 5]
+    
     chunks = []
     # If the text is short, just process it as one chunk
     if len(sentences) <= window_size:

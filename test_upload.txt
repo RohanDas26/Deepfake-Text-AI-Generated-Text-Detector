@@ -1,0 +1,4 @@
+The quick brown fox jumps over the lazy dog. This sentence is written by a human being who is testing things out.
+Another sentence here for good measure to make sure the chunking works properly. We need enough text to trigger the sliding window chunking.
+The system should split this into overlapping windows of sentences and process each one in parallel using Celery MapReduce chords.
+Each chunk gets analyzed by both the DeBERTa deep learning model and the Random Forest statistical model for an ensemble prediction.
