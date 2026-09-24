@@ -5,6 +5,7 @@ import torch.nn.functional as F
 from celery import Celery
 import mlflow
 import nltk
+import numpy as np
 
 # Download punkt
 try:
