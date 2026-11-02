@@ -190,9 +190,9 @@ Actual: PARAPHRASED       4 (10.8%)          5 (13.5%)          28 (75.7%)
 | Member | Specialization | Core Modules & Deliverables |
 |:---|:---|:---|
 | **Rohan Das (Lead)** | NLP Feature Engineering | • Designed `NLPEngine` with 8 linguistic features.<br>• Extracted DistilGPT-2 perplexity, sentence burstiness, and TTR.<br>• Curated and balanced the 555-sample multi-domain benchmark dataset. |
-| **Team Member 2** | Deep Learning (PDNN) | • Implemented PyTorch `PDNCDualBranchNetwork`.<br>• Integrated frozen DeBERTa-v3 contextual backbone with mean pooling.<br>• Formulated Focal Loss ($\gamma = 2.0$) and Cosine Annealing optimization. |
-| **Team Member 3** | Classical ML & Evaluation | • Trained and tuned the Random Forest baseline model (`rf_model.pkl`).<br>• Engineered the 65/35 soft-voting weighted ensemble strategy.<br>• Conducted holdout validation, confusion matrix analysis, and EDA plots. |
-| **Team Member 4** | MLOps & System Architecture | • Built FastAPI REST endpoints, rate limiting, and WebSockets.<br>• Configured Celery asynchronous task queue with Redis broker.<br>• Integrated MLflow, Prometheus metrics, and Chrome Extension client. |
+| **Sai Praneetha Oruganty** | Deep Learning (PDNN) | • Implemented PyTorch `PDNCDualBranchNetwork`.<br>• Integrated frozen DeBERTa-v3 contextual backbone with mean pooling.<br>• Formulated Focal Loss ($\gamma = 2.0$) and Cosine Annealing optimization. |
+| **Dhamini Nalluri** | Classical ML & Evaluation | • Trained and tuned the Random Forest baseline model (`rf_model.pkl`).<br>• Engineered the 65/35 soft-voting weighted ensemble strategy.<br>• Conducted holdout validation, confusion matrix analysis, and EDA plots. |
+| **Nikhileswar Reddy** | MLOps & System Architecture | • Built FastAPI REST endpoints, rate limiting, and WebSockets.<br>• Configured Celery asynchronous task queue with Redis broker.<br>• Integrated MLflow, Prometheus metrics, and Chrome Extension client. |
 
 </details>
 
