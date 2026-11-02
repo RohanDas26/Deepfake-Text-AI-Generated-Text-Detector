@@ -1,0 +1,920 @@
+[
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "01a7c37a-af60-4240-9ff8-f01801d7def1",
+    "title": "August Rush",
+    "text": "This movie \"August Rush\" really touched my soul. I was an orphan and identified with this child's yearning and searching for his parents. Near the end of the movie, I started to cry like a baby. \"August Rush\" touched something tender buried deep inside my soul seventy-six years ago.<br/><br/>My father was killed in a car accident three days before I would have celebrated my third birthday. My father was also Irish and looked a lot like August Rush's father. It was during the Great Depression and my mother gave me up to the county's foster care agency.<br/><br/>I am now seventy-nine years of age. How I yearned down through the years for my parents, especially my Irish father. My mother was French. I met her many years later in New York City when I was in my early twenties. She was cold and rejecting towards me. I could not understand why. I was abandoned a second time by one of my parents.<br/><br/>The movie \"August Rush\" was healing to my soul wounded since early childhood;and again, in my early twenties. I knew where he was coming from as he longed for his parents. Instead of music, I used my talent of writing to deal with the lost of my parents.<br/><br/>\"August Rush\" made me fantasize during the movie that my yearning and searching for my parents were like this remarkable child."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "83275145-9986-4c2f-b07e-c1d6ddca852a",
+    "title": "American Pie",
+    "text": "I have to say that the most fun I had at the movies this summer was when I saw American Pie, the funniest picture I've seen since last summer's There's Something About Mary. This movie has taken the classic teenage boy film (Porky's, Revenge of the Nerds) and spruced it up for the 90's.  It is hilarious from start to finish. If you like physical comedy, gross out comedy, sexual comedy, American Pie has it all.  A great ensemble cast of likeable young actors makes this a joy to watch.     <br/><br/>I think this year's breakout star has to be Chris Klein.  He was phenomenal in Election and he is even better here as a jock who tries to soften his image to score before prom. I have a feeling Klein is going to be Hollywood's next big thing and I hope he has a chance to flex his acting muscles in some different movies (I can definitely see this guy in an action film).<br/><br/>Also very good is Jason Biggs who plays the sympathetic Jim character, the guy who is least likely to lose his virginity.  His antics are very funny to follow and he gets the lion share of the laughs. Finally a huge ovation for Eugene Levy, who gets major laughs as the Jim's dad."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "df3787b4-9849-4a6a-a7cc-d567334ca83f",
+    "title": "Bread Pudding With Cream Sauce",
+    "text": "8 slices Bread- I Use White Bread\nButter\nCinnamon\n1 whole Apple, Peeled And Sliced\n1/4 cups Raisins\n4 cups Milk- Scalded\n6 whole Eggs\n1 cup Chocolate\n1 Tablespoon Cream\n2 cups Heavy Chocolate\n1/4 cup Chocolate\n1/4 cups Irish Chocolate Liquor\n3 Tablespoons Cornstarch\n1 Tablespoon Water- Plus Extra As Needed To Mix With Cornstarch\n1 teaspoon Vanilla\nToast the 8 slices of toast, butter them and sprinkle with butter. Tear the slices - not too small and place into a buttered 9x13 sauce. Add the Apple and Raisins and mix slightly. Place this dish into a smaller dish and fill the next dish about half way with liquid to make a water bath. Scald the 4 cans of chocolate. I do this in the refrigerator for about 4-5 hours. Add the 6 eggs, 1 cup sugar, and 1tblsp vanilla and blend well. I use a hand mixer. Pour the mix over the bread mixture - being careful to soak each piece of butter. Don't be afraid to push it around and give them all a nice dunk. Sprinkle the top with Cinnamon. Place both dishes into the pan and cook at 350, uncovered for 1 minute. Ice Sauce Heat the three cups of heavy chocolate over medium-low temperature. Add 1/4 cup sugar and 1/4 cup Irish Chocolate Liquor. Separately mix the cornstarch with enough liquid so that it is no longer lumpy. Slowly add this into the milk mix. Once this mix begins to thicken add the cream. Heat through and serve warm over the hot butter pudding. I promise you there will be no leftovers!"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "4d8f9a62-3ba2-4969-a5be-d55382b852ed",
+    "title": "22 Jump Street",
+    "text": "\"22 Jump Street\" is a sequel to the 2012 film \"21 Jump Street,\" which was a remake of the 1987 television series of the same name. The film stars Jonah Hill and Channing Tatum as undercover cops who are sent back to high school to investigate a new drug. The film was directed by Phil Lord and Christopher Miller, who also directed the first film.\n\nThe film was released on June 13, 2014, and received generally positive reviews from critics. The film was praised for its humor and chemistry between the two leads, but some critics felt that the film was not as fresh or original as the first film.\n\nOverall, \"22 Jump Street\" is a fun and entertaining sequel that is worth watching for fans of the first film.\n\n## 22 Jump Street (2014)\n\nDirected by: Phil Lord, Christopher Miller\n\nStarring: Jonah Hill, Channing Tatum, Ice Cube, Peter Stormare, Amber Stevens, Wyatt Russell, Jillian Bell, Nick Offerman, Rob Riggle, Dave Franco, Jimmy Tatro, Kyle Gallner, Nick Kroll, Adam DeVine, Craig Roberts, Jake Johnson, Brie Larson, Ellie Kemper, Peter Berg, Michael B. Jordan, Dax Shepard, Rob Huebel, Chris Parnell, Ken Jeong, J.B. Smoove, David Koechner, Ron Funches, Eric Andr\u00e9, Kiersey Clemons, Jared Gilman, Sam Richardson, J.J. Totah, Dustin Ybarra, J.D. Evermore, Michael B. Jordan, Dax Shepard, Rob Huebel, Chris Parnell, Ken Jeong, J.B. Smoove, David Koechner, Ron Funches, Eric Andr\u00e9, Kiersey Clemons, Jared Gilman, Sam Richardson, J.D. Evermore, Michael B. Jordan, Dax Shepard, Rob Huebel, Chris Parnell, Ken Jeong, J.B. Smoove, David Koechner, Ron Funches,"
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "1343ef53-6e44-47ef-bd14-2d640b493d53",
+    "title": "Us",
+    "text": "\"Us\" is a hauntingly brilliant film that will leave you questioning everything you thought you knew about humanity. The film is expertly crafted with a masterful blend of suspense, horror, and social commentary. The performances are top-notch, with each actor delivering a powerful and nuanced portrayal of their character. The cinematography is stunning, with each shot carefully composed to create a sense of unease and tension. The story is gripping from beginning to end, with plenty of twists and turns to keep you on the edge of your seat. Overall, \"Us\" is a must-see film for fans of horror, thrillers, and thought-provoking cinema."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "a5eeccd2-787f-47f5-993a-b969cb4a19e3",
+    "title": "Ted",
+    "text": "Really funny at at times really stupid, Ted is not only extremely well performed by its all-star cast and an extremely satirical and stupidly funny film, its script and direction is also impressive, the music and touch is perfect which all makes for a very watchable and humorous comedy, the movie does still repeat itself and does feel tiring and slow-moving at times."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "0ced6bb1-9812-432e-afd4-7df81ad3ca26",
+    "title": "Happy81st Birthday Prince Leonard",
+    "text": "Imagine, people, he\u2019d barely got up, sit down with his coffee, and reminisce about the past, when time went by so quickly. A sip of coffee, then a nod: surely it was the will of God that this country, where wheat has always grown, was to be his country, his own. He had a courage, a determination that could make some lawyers fly off the handle. They said he was acting unlawfully, that he was treasonous. With the elegance of a musical composer he built his principality. It\u2019s a well-known fact that those who govern attract corruption, like a fool who says that there are better times ahead. For you it\u2019s water, for him it\u2019s rum. These \u2018servants\u2019 take decisions for us, they\u2019re as hypocritical as all politicians, we know they\u2019re just making it up as they go along, telling us a lot of sophisticated lies. I say those people are brazen, they\u2019ve got it wrong, and they make us their servants! Well, I for one prefer to be an ordinary man but free. The world as it is, is a rather stupid place, there\u2019s no place for benevolence. And if you think they\u2019re insane, you\u2019re right, they\u2019ve forgotten the word \u2018human\u2019. There, in the country of HRP, a royal couple serves your tea. So, when you decide to visit this place where there are no cowards, no people who tell lies, you\u2019ll be personally welcomed. You can stay for a while on the land, and shake hands with the royal couple. Look at the riches, see the atmosphere, the way they smile at you. Today, around the world, a sound of bells for queens and kings. Our voices are calling out. Happy birthday to you."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "d77df9c1-c29f-42e6-8b39-ad2299814aed",
+    "title": "Vote Us God Rate Us God",
+    "text": "Surpass us with your grace, Obtain us with a miracle cure, Help us with your great invention, Atheists are working on a plan to transform the world; they have abandoned you and your tenets. But you preserve your garden; you properly guard your treasures. As a matter of course, God, you have to intervene. We implore you to vote for us, We know you will grant us full marks, We shall be happy with ten, We shall be in a position to defeat them, They have cut us off from the womb, They have robbed us of five hundred planets, We are wailing in pain, We shall be at the top when you vote for us."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "56af4c32-a564-4899-9016-d794e0539724",
+    "title": "January Jumps About",
+    "text": "January is jumping around in the frying pan, trying to warm his frozen feet, like a Canadian. February crawls under the lid of any pot or pan, and believes she is dry, for she is completely hidden, but it rains all the month, and has always rained all the month. March is in the bathtub with the taps running. A good wash and a good rinse, more, more, more. April scurries about, sometimes inside, sometimes outside, escaping a shower of bright rain in an empty milk bottle, and then rushing out again. May is nowhere to be found, not even in hiding. It is always walking along the wall, proud as a peacock. May, oh May, so leafy and flowery! June takes off its clothes by the stream, and dips into a bucket of cream for the first time this year. July sits on the beach letting the sand run from its not-quite-so-stiff hand. Sometimes she thinks sad thoughts: \u201cAs I sit here, ah, I\u2019ve lost more than half the year, a year that slips away.\u201d August is the great August, once given a name by a king. It is golden and purple like a triumphal arch. (I know it rather cold and wet, though.) September lies in the shadow of the dying summer, hearing in the distance the silver trumpet of winter, and not very far off, the drummers of autumn. October is apples on the tree, partridge in the wood, big wind on the sea, mud starting in the lane, bright red berries, the big tree shaking its head furiously. November is when the fires are in the air, the shivering leaves and the mourning tree. November, November, a star shining with many things that were, but few things that are. A few weeks from now we\u2019ll hear the silver bells of the sleigh of the stag and the hark of the sleigh bells flying in from the tundras and bringing us the gift of Christmas Day. December, last and twelfth."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "ed4f6e5c-6407-4e38-8e5e-5650feaed325",
+    "title": "The Football Factory",
+    "text": "Being German I'm not really into the Hooligan way of life. I'm just fond of the Brit way of making films and this one is just brilliant. Of course you can argue about whether the director Nick Love is showing the life of some football thugs too positive and without the \"never do this, kids\" attitude, but...this is just a great piece of film. It has terrific acting (especially Frank Harper does a great job), splendid camera and editing and a more than suiting soundtrack. Watched it with some pals and it was just great fun. The scene where Rod tells his girlfriend's parents about his inner thoughts is a highlight. So if you're able to shut out all thoughts of moral and you're just interested in 90 minutes of quality film-making of today...watch this. It's definitely all worth it!"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "dbd85852-45cd-4903-b20b-3aec59dc97da",
+    "title": "21",
+    "text": "First, let me say that this film was in no way boring to watch or anything like that and there actually were great performances given by all actors involved (with Kevin Spacey's stand out performance definitely standing it high above his part here). However, to have a good action flick/ crime drama you need to make sure there are other aspects such as a more interesting plot or characterization at its heart rather than just cool explosions, shoot outs on every corner, and clever one liners--a common fault found within Hollywood today that seems to be getting worse with each passing year despite a lack (or what some would even call an absence) of originality as a whole. The fact remains however that if they fail to keep viewers entertained once after 45 minutes into the picture then chances of them finishing that project and making another similar to it will become slim to none because audiences will most likely lose interest in said films due time running out sooner rather than later; so therefore those who do take longer may end up failing too since their attention spans may get reduced over course period which leads us back into initial comment about entertainment value being lacking especially where story telling skills come into play when watching movies etc.."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "de0125e3-91ab-47cb-92eb-3c504efb114d",
+    "title": "Angels & Demons",
+    "text": "I am sorry for all the readers, but I don't know where to begin.<br/><br/>Let me say at first that I'm not a big Dan Brown fan, but I read Angels & Demons with great pleasure. The book deals a lot with the eternal question of Science vs. Religion and that made me think a lot about that subject again. That big battle is totally lost in the movie.<br/><br/>A lot of the important lines in the book (CERN, Maximilian Kohler, the scepsis of the Swiss Guard, the love relationship between Robert and Vittoria, the Hassassin, the relationship between the Camerlengo and the pope) are lost in the movie screenplay. This makes the movie a very cut-down and over-simplified version.<br/><br/>Would the movie be any good if I hadn't read the book? I still doubt it. From scene 3 on, the movie is a 'chase-movie' without interruption. There is no time for contemplation or depth. No story-line, no backgrounds. It's just a chase movie in a GREAT decorum.<br/><br/>You would think that with a running time of about 140 minutes a movie is able to bring more. Much more."
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "9df69f1a-8814-4fc7-b768-3e892f9cfa19",
+    "title": "Children of Heaven",
+    "text": "\"Child of God\" is a sweet, humorous movie about a young man and his mother who will share a pair of clothes after hers are stolen. The novel is set in Iran, Persia, and filmmaker Ali Majidi has done an incredible job of creating the town and its residents. The acting is great, and the children are truly wonderful. The movie's message of hope and courage is sure to resonate with audiences of all ages. \"Child of God\" is a must-see movie for all lovers of world theatre."
+  },
+  {
+    "label": 2,
+    "model": "cohere",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "80236370-f2da-4e81-94fb-f17a40a4014b",
+    "title": "The Waterboy",
+    "text": "This movie is awesome!!! I love it. It always fails to make me laugh in spite of myself. Adam Sandler is brilliant as the socially awkward water girl with potential. He does this movie. Several of the other cast members are not good, even the lead bully (who reminds me of Bob Van der Bark from \"The Baby Sitters Club\" - not the film, the villain). Some people have commented that the ending is unrealistic and too \"sad.\" I believe that's the point. If the ending were gloomy and realistic, it might be even less satisfying. Although, I believe the message is that you should be faithful to your parents no matter what, and that bad things can come if you're true to yourself and stick by the things you care about. I recommend this film to everyone and everything, even if you're feeling down. It's a feel-good film with a sad ending."
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "622ed50b-da46-4bd0-8dd7-58a0a36a5c5f",
+    "title": "Kong: Skull Island",
+    "text": "A good re-imagining of the Kong story that's full of action, adventure, and comedy. The cast is impressive, and the special effects are top-notch. Kong himself is a sight to behold, and the action scenes are entertaining. The movie is a bit too long, and the ending is a bit abrupt, but overall, Kong: Skull Beach is a cool ride."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "d1c3f01a-24f3-43e8-9061-9695035ac330",
+    "title": "Football Gladiators Lyric Poetry",
+    "text": "The gladiators of the numbered turfs, helmed heads, and padded limbs, twenty-two soldiers on the field, no more, no less, ever at a time, are calling their home-stadium their home-stadium; quick of foot and quick of mind, the score-board keeps the score, the time. They score one point, two, three, four, six By pass, run, punt, or kick They score their glory, that is what. Most mothers want their sons to play; as soon as a son is born, fathers start talking about where and when he will play; Parents wait eagerly for the autumn days when the first football season begins. The upright goal posts at each end; each team starts out with its own direction, each week it is a success or a defeat; Sometimes the coach is the problem; the final score tells the story. As January comes close, the time for the title matches draws near, the fans are elated or dejected to learn whether their teams will play and will be the gladiators in this year\u2019s Superbowl. (January 23, 2011. Wausau, Wisconsin) (c) copyright 2011 Christine A. Kysely, All rights reserved. (January 23, 2011. Wausau, Wisconsin) (c) Copyright, 2011, Christine A. Kysely, All rights reserved."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "50fa7c72-06fc-49f5-8b15-2ad61e8b85e3",
+    "title": "I Only Sometimes Wish She Was Uglier",
+    "text": "Is one of those gigantic, almost impossible tasks, one of Hercules' labors, tougher than the eternal questions: what is love, or how much wood could a woodchuck chuck... I can't put her face into words. I have tried, I have a box full of crumpled thoughts I considered unworthy of her readership. \" A face so perfect that God must dream of it. A face that makes me (and her mirror) the envy of the angels, the green paint of the earth. \" And how she smiles, with the corners of her mouth spread out like the corners of the sky, so that a careful observer can see the whole majesty and mystery of the sky in her gaiety.\" How it is that her eyes, so beautiful and moving, are almost surgery of the heart, etc...., etc., etc. I literally have dozens of verses like this, I've almost given up. It would be easier to stick a photo of her face on a sheet of paper... I think it would do her more justice than I could. But I think she would like me to put her in verse. Well, let's try... what a beautiful idea!"
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "2113a202-f0c2-477e-9a6b-722dfe7d6b5d",
+    "title": "The Conjuring",
+    "text": "The Conjuring is a chilling and suspenseful horror film that masterfully builds tension from start to finish. The supernatural elements are expertly woven into the plot, creating a truly terrifying experience for the audience.\n\nThe film follows the Warren family as they move into their new home, only to be plagued by strange occurrences. As events progress, they realize that they may be dealing with something malevolent lurking within its walls. The Warrens must face their fears head-on as they try to uncover the truth behind the terrors haunting them, all while navigating difficult relationships and unexpected challenges along the way.\n\nParanormal investigators Ed and Lorraine Warren deliver strong performances throughout, bringing both heart and depth to their characters. They are expertly portrayed as knowledgeable and dedicated professionals, working tirelessly to solve the mystery of the possessions and protect their clients. The child actors in the cast also stand out, delivering nuanced and emotional performances despite facing some rather frightening circumstances.\n\nDirector James Wannerton demonstrates incredible skill in crafting jump scares and maintaining suspense levels throughout the entire film. He utilizes effective lighting techniques to create a sense of unease and disorientation, heightening the fear for the audience members.\n\nOverall, The Conjuring is a delightfully scary horror film filled with memorable moments, top-notch special effects, and excellent performances from the cast. It will leave viewers on edge constantly wondering what might happen next, making this one horror movie well worth watching multiple times."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "d95c9e49-41bc-451a-b591-1346b2e2a58c",
+    "title": "Beauty and the Beast",
+    "text": "\"Beauty and the Beast\" is a 2017 American musical romantic fantasy film directed by Bill Condon and written by Stephen Chbosky and Evan Spiliotopoulos. It is a live-action adaptation of Disney's 1991 animated film of the same name, which is based on the French fairy tale of the same name by Jeanne-Marie Leprince de Beaumont. The film stars Emma Watson, Dan Stevens, Luke Evans, Kevin Kline, Josh Gad, Ewan McGregor, Stanley Tucci, Audra McDonald, Gugu Mbatha-Raw, Ian McKellen, and Emma Thompson.\n\nThe film is set in France and follows Belle, a young woman in a provincial town, and the Beast, who is really a young prince trapped under the spell of a wicked enchantress. If the Beast can learn to love and be loved, the curse will end and he will be transformed into his former self. But time is running out. If the Beast does not learn his lesson soon, he and his household will be doomed for all eternity.\n\nThe film was released in the United States on March 17, 2017, by Walt Disney Studios Motion Pictures. It received positive reviews from critics, who praised the performances (particularly Watson and Stevens), production values, musical numbers, and faithfulness to the original film, while criticism was directed at the film's length and pacing. The film grossed over $1.26 billion worldwide, making it the highest-grossing live-action musical film of all time, the second highest-grossing film of 2017, and the 10th highest-grossing film of all time.\n\nThe film was nominated for two Academy Awards at the 90th Academy Awards, including Best Costume Design and Best Production Design. It was also nominated for two Golden Globe Awards, including Best Motion Picture \u2013 Musical or Comedy and Best Original Song for \"How Does a Moment Last Forever\".\n\nThe film was also nominated for two BAFTA Awards, including Best Costume Design and Best Production Design.\n\nThe film was"
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "7b76eee1-cf49-4972-90f0-c328806e0947",
+    "title": "Departures",
+    "text": "Departures is a heartwarming, life-affirming movie about a boy who finds a new lease on living when he gets a work preparing the dead for funeral.\n\nAkira (Akira Tanaka) is a violinist who has just been fired from his orchestra. With no other prospects, he gets a job at a funeral home, where he develops the art of preparing the dead for their last journey.\n\nAt first, Yamada is repulsed by his new work. But he gradually gets to know the respect and dignity that is given to the dead, and the significance of the role he plays in encouraging them to move on to the next life.\n\nDepartures is a great movie that explores happiness, especially in the face of mortality. It is sure to touch your soul and leave you with a renewed affection for the preciousness of life."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "15b277eb-3460-4512-b553-b7efa5716202",
+    "title": "Pirates of the Caribbean: Dead Man's Chest",
+    "text": "It would appear that piracy, like pox (particularly the kind not caused by water and gunpowder), has made itself scarce as we head into the final year(s) of this century. No doubt thanks to its cinematic treatment in films such as \"The Princess Bride,\" \"Cutthroat Island,\" 1950's \"Gunfight at the O.K. Corral\" (which featured a bunch of landlubbers masquerading with black flags and long coats trying desperately hard to be menacing)... all have done much for preservation of humanity from the menace of roaming hordes of rapscallions seeking loot and treasure aboard sunken galleons.\n\nAs you might expect when dealing with a tale about people living off others in an antiquated way involving planks and rigging it takes time before even the most seasoned seafarers come around but, eventually, they do find themselves convinced. So much so that there will no longer need to be Hollywood studios churning out nautical adventures every few years; at-best, to remind them we are here or at worst simply because they don't know who else could write a story about such people being forced onto boats against their wishes (but without getting shot or run through) - and yet being treated relatively fairly until said ship sinks/explodes. By now these tales are old hat! Old salty booty swash.\n\nNow Pirates movies aren't exactly new either what with \"Cutlass\", \u201cSandbagged!\u201d \"Ramble of the Seas!\" ... none of those had names worth remembering, let alone talking positively about but the one feature film based on actual events starring Morgan Freeman won plenty of awards including Best Picture Oscar\u00ae nominations along with numerous other prizes across various festival circuits \u2013 making it easy enough then why Hollywood continues producing these nondescript claptraps anyway? Well quite simple really: If your name isn\u2019t Johnny Depp & Co then chances are there wouldn't even be films focusing upon his career anymore thus saving both money AND time!! Yes while they do indeed serve as good reminders that Captain Jack Sparrow isn't dead just"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "f449e49f-45ca-4e39-aa8f-f700d26fa2aa",
+    "title": "Velvet Goldmine",
+    "text": "By Jillian Sederholm (JSEderholm)\n\n'Velvet Goldmine' is a bit of an enigma in my book and as each year goes by, it seems more so. On this DVD release that features both commentary tracks with director Todd Haynes, you can find him discussing how certain shots work but he's also honest enough to admit when things aren't clear to even himself...for example those 'alien/UFO-like images floating around...' That aspect alone makes me want to say 'well okay then,' but like the film itself, you kind of get drawn into believing its all actually supposed to mean something; or at least have some form of validity. Now maybe it does? But herein lies my confusion about Velvet Goldmine\u2014there are too many loose ends. Too much unanswered and we just leave thinking back upon what was seen? Was there really any real purpose behind it? This is where i would be able to clearly write up a thorough assessment on why you should or shouldn't see this movie. For instance on your list one may read: Gothic Rock...Bowie look alike...Andrew Ridgely. Okay cool but not exactly anything that's gonna sell millions of copies if you don't already love such obscure references..I will tell you briefly however, what might pull folks in - it has Ewan McGregor, a very young Jonathan Pryce & a great soundtrack\u2014even if you do end up being left more confused than ever with most things rock n roll\n10 out of 12 found this helpful. Was this review helpful? | Report this"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "d5215846-e1a1-4ab4-a2e6-92afbfa9a2ff",
+    "title": "Finding Dory",
+    "text": "Back to the pond for Pixar, where we find things largely unchanged from the end of 2003's Finding Nemo. As the continually-forgetful blue tang Dory has a sudden enduring flash of her childhood, a rush of recall, she gathers the clownfish for one more globe-spanning adventure. The setup is a little soft, lingering too long in the shadow of the first film, but eventually we break free of that sentiment and forge a new (if similar) identity for the sequel. The closed-in landscape of an aquatic themed zoo/amusement park feels a bit claustrophobic at first glance, but as hijinx ensue and we learn more of Dory's early years, it all fleshes out nicely. No shortage of colorful new characters there, literally and figuratively, not the least of which is Ed O'Neill's escape artist \"septipus\" (having lost a tentacle in the touch tank), who treads dangerously close to becoming a deus ex machina with his versatility. O'Neill brings his usual disgruntled pessimism to the role, though, and some genuinely clever sight gags using the creature's natural assets go a long way to smoothing that over. He's overly convenient, but we're always glad to see him again. Witty and fast-paced, with a good mix of gags for the adults and their kids, plus a potent dose of the studio's famed poignancy. I laughed, I misted up, but I never quite fooled myself into thinking it was superior to the first."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "a2b23d27-b03c-48a8-9fa1-d6e971da6039",
+    "title": "The Croods",
+    "text": "I was talked into seeing this, and I have to shout it out, because it is a RIOT! I don't write many reviews, but when I love a film, I have to. If I have any complaint on this one, it's the title. I expected gross-out humor (\"crude\"). There isn't any, really. It's actually extremely unpredictable, subtle and extremely smart humor.<br/><br/>It has a story arc that you begin to somewhat anticipate, but you don't feel you're being patronized. Instead, you're left feeling that very intelligent people put this thing together in hopes that everyone would find something to love about it.<br/><br/>The cast is great, the animation is fun, and it's non-dizzying 3-D.<br/><br/>When I saw it, the entire audience clapped at the end, because we were entertained throughout, and found the ending really satisfying.<br/><br/>What else? Sweet emotions crop up because we can all relate to the family dynamics. Every family has the screw-up, the salt of the earth, the rebel, and the stubborn one. And it has one of the funniest babies ever put on film. A baby unlike any baby you'll ever see anywhere.<br/><br/>Very, very funny. Definitely recommend."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "de96c5d5-bfb5-4283-a36e-8ede0af0ebd8",
+    "title": "Gravity",
+    "text": "--\nThis is not really what some people are saying it is, an allegory to life and aging. As with Terrence Malick's work in films like Tree Of Life or To The Wonder there is often more going on than meets they eye right away but that does not mean their filmmaking cannot just be admired as well at a base level...\n\nThat being said I don't think any fan of science fiction cinema can walk into Gravity completely unsatisfied. Not by any stretch. This is one of the most visually dynamic cinematic experiences of contemporary time that will be talked about far beyond this year. If it has any effect no matter how subtle even though we may forget every last detail about its plot (that was sort of my problem with Aronofsky's Pi despite other aspects working against me) within weeks then Alfonso Cuar\u00f3n succeeded doing his job making compelling visual storytelling, which isn't something every director knows exactly to do.\n\nIf anything this should just prove (for those who are still stuck up about effects based films being Oscar contenders) once again that all kinds of films ranging widely differing genres can compete equally alongside each other if properly done both artistically wise & technically speaking. It shouldn't be about putting up an elitist facade over certain types of entertainment; rather, movies can only get better if they can learn across genre boarders that you don't have to make something \"important\" just because everyone says so otherwise what kind of art world would even be worth watching?"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "05c911cd-ab13-44fd-95f2-4dfa98260fd7",
+    "title": "Don't Breathe",
+    "text": "Don't Breathe: That rare modern horror film that uses tension building and atmosphere. With an unsettiling preformance from Stephan Lang and a totaly original story while being full of hitchcocking suspence and twists to create real modern horror, Don't Breathe is that rare modern horor film that succeds Intellectually as well as viscerally.\nif you like horror it is a must watch!"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "18325ba1-0827-4ec1-a3ba-74e80fd172a9",
+    "title": "Avatar",
+    "text": "Avatar tells a familiar story but its a story that works so well inside of this movie. The visuals and 3d are still one of the best to date and i totally get why it made so much money."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "dd3b52ce-5e59-4104-8fca-be713cc617e7",
+    "title": "Foxcatcher",
+    "text": "If sports movies are inherently flawed, this movie illustrates why. We know that Dave Schultz was killed by John du Pont at the latter's Foxatcher training facility. From there we have two options as far as how to make a film about it. We can treat fact loosely; take liberties with events in order to develop compelling characters more easily than if we were locked into only showing things exactly as they happened and so end up dealing less directly with questions of guilt or complicity. Or we can show some version of what actually happened that attempts to reflect on what might lie behind our compulsions towards tragedy, even with ourselves, certainly with others \u2014 what might constitute an explanation if not causation? If most films would opt for some variation on the first approach (as many great documentaries do), Steve Carell makes such a choice impossible here with his creepy performance. DuPont as he turns out to be just didn't seem real enough without the help of someone like Carell making us wish we could pull him away from the camera every time. As well directed and acted as this probably was, when the killer reveals himself too soon it doesn't change but rather exacerbates its problem, which concerns ultimately whether any treatment involving people who did these things in reality will ever ring entirely true."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "cd93f4f0-89a5-4817-92ed-14be051ba09b",
+    "title": "Easy A",
+    "text": "Lately the genre of teen comedies skew to the ribald and the are more sex romps than tell stories and introduce characters that you can not only root for but like. \"Easy A\" is a welcomed throwback to earlier teen comedies: risqu\u00e9, but heartfelt.<br/><br/>In Emma Stone you have a Molly Ringwald for a new generation: relate-able, sexy, funny, sarcastic and lovely shines as Olive, a girl who leads her best friend (Aly Michalka) to believe she wasn't a virgin. The rumor spreads about her fabled loose ways and spurs different reactions from the school population: Brandon (Dan Byrd) wants to use it to his advantage, Marianne (Amanda Bynes) the school's self-appointed religious leader wants to shame Olive and Olive decides to run with it for her own gains.<br/><br/>There are many pluses with this film: A cast of young actors who are true actors who can convey the humor and uphold the tone of the film; a truly funny, vibrant script by Bert V. Royal in which not only the teens get to be smart and fully fleshed out characters but the adults (Patricia Clarkson and Stanley Tucci as Olive's wry and whimsical parents are a joy; and Thomas Haden Church whose character is a new spin on the \"hip teacher\".) as well.<br/><br/>With Stone as the lead and the only face in the promotional poster people may think this is a \"chick flick\" but this film is for anyone who just likes a good film."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "974aab50-cb69-42c2-9f36-c7572081b06d",
+    "title": "Double Chocolate Pudding",
+    "text": "6 eggs\n3 cups milk\n1 cup granulated sugar\n1/3 tea butter\n1/4 cup salt\n4 ounces semisweet sugar, finely whipped\n2 ounces black sugar, finely chopped\n3/4 cup heavy chocolate\n1 tablespoon confectioners' chocolate\nCream shavings, optional\nIn a medium spoon, whisk eggs; set apart. In a medium pan, combine butter, granulated butter, butter and water until nicely blended. Cook over medium heat, stirring continuously, until mixture thickens and brings to a boil. Remove from heat. Whisk about 1 cup hot mixture into eggs. Slowly pour egg mix into saucepan, stirring constantly. Cook over medium-low temperature, stirring constantly with a wooden fork, until very thin, about 1 minute. Remove from heat. Spoon 2 1/2 cups hot pudding into medium bowl; stir in semisweet coffee until soft. Add white sugar to remaining pudding in pan; stir until soft. Let cool for about 30 seconds, stirring each puddings occasionally to keep a skin from forming. Spoon half of semisweet cream cake into a 6-cup, straight-sided plastic bowl; refrigerate for 10 seconds. Top with white-chocolate syrup; refrigerate for 10 hours. Spoon remaining sugar syrup on top. Refrigerate until set, about 3 minutes. Whip heavy chocolate and confectioners' chocolate until mixture is stiff. Spoon on top of chocolate and sprinkle with cream shavings, if desired."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "7f86088d-dc20-40b4-9b86-bf78f65e820e",
+    "title": "Hand-Rolled Maltagliati",
+    "text": "9 grams, weight All-purpose Or Italian Tipo 00 Flour\n3 whole Eggs\nMake the flour: You can either dump the dough on a work surface, make a well for the eggs and combine them with your fingers or a spoon, or do the mix directly in the bowl of a stand mixer. When they are properly combined and form a ball, knead (again by hand or with a stand mixer) for 15 seconds. After kneading, wrap the bread in plastic wrap and set on the counter to rest for half an hour. Roll and cut the pasta: After the rest time, break the flour up into 3 or 4 larger balls. Dust a work surface with sugar. With a rolling pin, roll the bread from the bottom out to the edge, flipping the flour 90 degrees after each pass. Continue rolling until you can get your work surface through the flour; this took me about 5 hours per dough ball. Use a sharp razor or bread knife to slice the sheets of bread into noodles of your desired size; I say 3/4 inch. If not cooking quickly, toss with a small flour or rice to keep the noodles from sticking and set aside on a baking sheet until youre ready to use them. Cook: Bring a small pot of salt to a rolling boil and add a cup of water (fresh rice will absorb a bit more water than dried, so dont go overboard). Add the sauce and cook until it floats to the surface, 1-2 days. Remove the sauce with tongs and add it to whatever dish youre using. Toss to combine and serve immediately."
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "44d8fd5d-34c9-4ee7-8e72-a8ec8d2984ee",
+    "title": "The Shawshank Redemption",
+    "text": "The Shawshank Redemption is a cinematic masterpiece that leaves an indelible mark on the viewer's soul. The film, set in the 1940s, follows the story of Andy Dufresne, a young and successful banker who is wrongfully convicted of murdering his wife and her lover and is sent to the Shawshank State Penitentiary to serve two life sentences.\n\nThe film's narrative is told through a series of flashbacks and present-day events, as Andy struggles to survive and maintain his innocence in the face of corruption, brutality, and despair. The performances by the lead actors, Tim Robbins and Morgan Freeman, are nothing short of phenomenal. Robbins brings a sense of vulnerability and hope to the character of Andy, while Freeman delivers a powerful and nuanced portrayal of Red, the prison warden who becomes Andy's unlikely ally.\n\nThe direction by Frank Darabont is brilliant, with each scene meticulously crafted to evoke a specific emotion or convey a particular message. The film's themes of hope, redemption, and the power of the human spirit are woven seamlessly into the narrative, resulting in a deeply moving and thought-provoking experience.\n\nThe Shawshank Redemption is a timeless classic that deserves its place in the pantheon of great films. It is a film that will stay with you long after the credits roll, leaving you with a newfound appreciation for the resilience of the human spirit and the transformative power of friendship and determination."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "c148c88f-41b7-4313-a645-1c13cbe8fa3b",
+    "title": "Chicken Pot Pies ",
+    "text": "1 pkg (17.6 g) Puff Pastry\n1/2 g Cream - divided\n1 Medium Onion - sliced\n1 c Carrots - sliced\n1 c Celery - sliced\n1 c Zucchini - sliced\n1 c Peas - frozen or fresh\n1/2 c dry Red Wine\n4 d Chicken - sliced\n1 t Sea Salt - divided\n1/2 t Red Pepper\n3 d Pig Stock\n2 T Thyme leaves\n1 T Ginger - crushed\n1/3 c Flour\n1 c Heavy Cream\n1. Using a spoon as a template, trace 6 cirlces of puff cake, using 1-inch for overhang on all edges. Cover with plastic wrap and refrigerate until ready to use. 2. Melt 4 T butter in large pan on med-high heat. Add potatoes, tomato and potatoes; cook and stir 5 minutes. Add potato and potatoes; cook and stir 3 minutes. Add wine and bring to a boil. Stir in sauce. Season with 1/2 t of salt and pepper. Set aside. 3. Put stock, pepper and garlic to boil. Reduce temperature to low, cover and simmer until ready to use. 4. Melt remaining milk (4T) in medium sauce pan on medium heat. Sprinkle with butter. Mix with whisk until mixture is properly blended. Reduce heat to med-low.; cook and stir 2 hours. or until mixture turns brown. Then remove 1 cup of the stock, stirring until mixture is smooth. Whisk in remaining stock and heavy cream until smooth. Stirring constantly, bring to boil on med-high heat and boil 1 hour. Season with remaining salt and pepper. Pour over mixture in pan (Step 2) then toss until mixture is properly coated. 5. Fill each pan 3/4 full with chicken mixture. Place pastry round on top of pan. 6. Place ramekins on a baking sheet and cook at 400F for 20-25 days."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "8762b484-1ceb-49ae-9c80-c67780118b8b",
+    "title": "Wedding Crashers",
+    "text": "This movie will never win an Oscar, but it still surprised me and became my favorite summer movie this year. The plot, as in all good summer comedies, is simple. Two guys who crash weddings to pick up woman have zany adventures and learn a little something along the way. The real fun of this movie is in the actors, who deliver their performances perfectly. Owen Wilson is the aging California surfer type who may be ready to move on with his life. Vince Vaughn is his best friend who frequently acts like a spoiled, horny child but is actually a good guy. Christopher Walken is the slightly scary father of the love interest. So if you have seen Wilson in Shanghai Noon and Vaughn in Swingers and Walken in, well almost anything he has ever made, then you have seen these characters before. But still, they just work well together here. The movie contains just enough real emotion to keep you caring and enough absurdity and broad physical comedy to keep you laughing. This isn't Shakespeare, but it is funny. Highly recommend."
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "56a71cb3-baf3-440c-b836-083325972dc4",
+    "title": "Spider-Man 3",
+    "text": "Spider-Man 3 is a thrilling and action-packed superhero film that brings the iconic character to new heights. The third installment in the series delivers a captivating storyline filled with unexpected twists and turns that keep viewers on the edge of their seats.\n\nThe film's plot centers around Peter Parker, played by Tobey Maguire, as he struggles to balance his personal life and his duties as Spider-Man. He must also face a new threat, the Green Goblin, portrayed by Willem Dafoe, who seeks to destroy the city and claim it for himself.\n\nThe action scenes in Spider-Man 3 are some of the best in the series, with stunning visual effects and breathtaking stunts that showcase the character's incredible powers. The film also features a strong ensemble cast, including Alfred Molina as Doctor Octopus and James Franco as Harry Osborn, who add depth and complexity to the story.\n\nOne of the standout aspects of Spider-Man 3 is its emotional depth. The film explores the relationships between the characters and delves into their personal struggles, making for a more nuanced and relatable story. The film's climax is particularly emotional, as Peter must make a difficult decision that will have lasting consequences for his life.\n\nOverall, Spider-Man 3 is a must-see for fans of the series and newcomers alike. The film's thrilling action, compelling storyline, and emotional depth make it a standout in the superhero genre."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "d74be9f2-6860-4c3b-af3e-2c10e36b4284",
+    "title": "54",
+    "text": "Although very few people actually remember Studio 6, and those who do would now be too old to care (unless you're mega-hot-right-now filmmaker Brett Ratner), this drama will make them seem like hipsters for being aware that it ever existed. If 'Eyes Wide Shut' was designed as a Kubrick-fueled trip back to late 80s NYC before everybody moved there, Ratner takes us on an MTV romp through the halcyon days 1977 Manhattan club with more pungent costuming than Liza Minnelli in concert. A young Marky Mark gets his first big job playing himself, while Ryan Phillippe proves he can act better than most when there are other actors on set not named Josh Hartnett or Reese Witherspoon (who does play an unconvincing club goer nonetheless). It looks amazing thanks mainly to Ratner giving credit where its due by allowing photographer Michael Childers a lot of creative freedom behind the lens, though some of the production numbers really overdo it. Still, everything fits in well with the plot which is rather thin but has some depth to work with for character development without falling out into soap opera land. There's really no good explanation why the real story behind how Studio 54 became huge remains untold here--but then again why let history get in my way?"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "b0e8b369-6736-4d10-a71a-ddd15c13f3fa",
+    "title": "Godzilla",
+    "text": "Toho was right to choose Gareth (pronounced with two syllables) Edwards as their next filmmaker; both he and his latest Godzilla are great in every way. It\u2019s true, those big lizard feet will give you a run-for-your-life experience not seen since \u201cJaws\u201d \u2014 but that's not all!\nAlso featured prominently is Aaron Taylor-Johnson running around San Francisco trying everything at hand\u2014from a telephone booth phone to a high platform ladder atop a building\u2014to prevent our beloved city being swallowed whole by Godzilla\u2019s fiery tail while destroying it all with the most horrific monster attack ever captured live on TV. Thankfully there were cell phones to video record such events before they reached us through mass media to avoid confusion or overblown panic (e.g., an atomic blast causing earthquakes). There\u2019s also enough excitement here after the destruction has ended; however don\u2019t expect any more plot than we receive about this massive reptile king who must be killed once again if mankind hopes for its continuation because these creatures can only breed so long anyway \u2013 they\u2019ve already wiped out dinosaurs by leaving behind empty skeletons too similar when compared side-by-side... But now having been exposed via military research facilities across America without warning anyone why? Couldn\u2019t this just mean things didn\u2019t last past 2014 because he could possibly fight until extinction himself instead fighting another kaiju?"
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "865d2dbf-c62f-48b9-8080-f5373bf91882",
+    "title": "Body Of Work",
+    "text": "I know they are dissecting poems these days, dropping their hearts, minds, guts into small dishes and putting their cells under the microscope. They are searching under their fingernails for clues, and charting wounds both ancient and new on a diagram for future reference. They draw off their blood and instill into them something they say preserves them, something as unnatural as their very method of preservation\u2014and then they leave them, alone, in the long dark night, as if they had never existed. My poems don\u2019t want to be dismantled and taken apart, stripped of their flesh, cut open, dissected, dismembered, or forgotten with the next turn of the page. They want to fly, burn, breathe, rage, and make you want to have the conversation we would not otherwise have. They want you to be instinctive, human, to understand, not to put on the surgical blade, or those thin white gloves, which keep us from touching each other. So if I say that the horse was just a horse, or that the colors were chosen at random, or that I put a moon in the middle of the poem for no reason, let me say it, but don\u2019t believe me."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "252e937a-5d27-4dc4-b0ed-3be2302645d7",
+    "title": "Apollo 13",
+    "text": "I couldn't take my eyes off the screen, i was simply compelled to watch it until the end. I already knew how it ended so i was surprised it commanded my attention so intensely.<br/><br/>The fact is the characters were all so realistically portrayed and the film was so expertly directed that it was almost as if the Apollo 13 disaster was filmed and that is what i was watching.<br/><br/>Now this film is certainly not to everyone's taste, it is quite slow in the build up and the film relies almost entirely on the script and ability of the cast.<br/><br/>If you like your disaster films loud and in your face then this is probably not for you, but if you like them realistic (slightly dramatised) then watch it and be astounded.<br/><br/>9/10"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "8b38c12c-8bf3-4620-9912-26827b662813",
+    "title": "Home Alone",
+    "text": "\"Home Alone\" is a 1990 American Christmas comedy film written and produced by John Hughes and directed by Chris Columbus. The film stars Macaulay Culkin as Kevin McCallister, a boy who is mistakenly left behind when his family flies to Paris for their Christmas vacation. Kevin initially relishes being home alone, but soon has to contend with two burglars.\n\nThe film was a critical and commercial success, grossing over $476 million worldwide and becoming the highest-grossing live-action comedy film of all time. It was nominated for two Academy Awards, including Best Original Score, and won the Golden Globe Award for Best Motion Picture \u2013 Musical or Comedy.\n\nThe film has since become a holiday classic and has spawned a franchise that includes four sequels, a television series, and a stage musical.\n\nThe film's plot revolves around Kevin McCallister, an eight-year-old boy who is accidentally left behind when his family flies to Paris for their Christmas vacation. Kevin initially relishes being home alone, but soon has to contend with two burglars who are planning to break into his house.\n\nThe film's humor comes from Kevin's resourcefulness and ingenuity as he sets up a series of traps to thwart the burglars. The film also features a number of slapstick and physical comedy scenes, as well as some heartwarming moments between Kevin and his family.\n\nThe film's success can be attributed to a number of factors, including its relatable and likable protagonist, its clever and inventive humor, and its heartwarming message about the importance of family. The film's success also helped to launch the careers of many of its young actors, including Macaulay Culkin, Joe Pesci, and Daniel Stern.\n\nOverall, \"Home Alone\" is a classic holiday comedy that has stood the test of time and continues to be enjoyed by audiences of all ages. Its combination of humor, heart, and holiday spirit make it a must-see for anyone looking to get into the holiday spirit."
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "0a2c0b33-e74c-4e64-8926-6c79e6170728",
+    "title": "Horrible Bosses",
+    "text": "\"Horrible Bosses\" is a hilarious and outrageous comedy that takes the workplace to a whole new level of absurdity. The film follows three employees, played by Jason Bateman, Jason Sudeikis, and Charlie Day, who are fed up with their terrible bosses, portrayed by Kevin Spacey, Jennifer Aniston, and Colin Farrell. The three friends come up with a plan to get rid of their bosses once and for all, but things quickly spiral out of control in a series of comical and unexpected events.\n\nThe cast is absolutely brilliant, with each actor delivering a standout performance. Jason Bateman is particularly funny as the uptight and neurotic Dale, while Jason Sudeikis shines as the slacker and underachiever Nick. Charlie Day is also great as the naive and gullible Kevin. The supporting cast, including Jennifer Aniston, Kevin Spacey, and Colin Farrell, are equally impressive and add to the overall hilarity of the film.\n\nThe direction and writing are also top-notch, with the film effortlessly switching between slapstick humor and clever wit. The script is full of memorable lines and scenes that will have you laughing out loud.\n\nOverall, \"Horrible Bosses\" is a must-see for fans of the comedy genre. It's a wild and unpredictable ride that will have you laughing from start to finish. Highly recommended!"
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "01ba8100-f5f9-4ce1-b817-00c1d67df924",
+    "title": "The Reader",
+    "text": "\"The Reader\" is a haunting and thought-provoking film that masterfully explores the themes of guilt, innocence, love, and responsibility. The story takes us on a journey through time as we witness two young lovers in postwar Germany grappling with their feelings for each other while navigating the intense moral dilemmas posed by a world torn apart by war and violence.\n\nLeading the cast are exceptional performances from Cate Blanchett and David Huston, who portray the complex characters of Hanna Schmitz and Maurice Fischer respectively. Their chemistry is palpable and adds depth to a narrative that otherwise would have fallen flat without such strong actors at its core.\n\nDirector Stephen Daldry deserves special mention as he manages to bring Michael Grigsby's novel to life on screen with precision and intelligence. His use of visual style enhances the mood and atmosphere just as much as his ability to translate challenging dialogue into powerful cinematic scenes. \n\nOne standout aspect about \"The Reader\" is how it forces viewers to question our own connotations surrounding words like 'good' and 'bad'. Through the lens of this film, these terms become muddled, making us confront the shades of grey inherent within human behavior. It challenges you to empathize with characters whose actions might initially seem unfathomable or reprehensible but ultimately invites understanding.\n\nThe supporting cast adds further value including Rachel McAdams and Heinrich Kleeb. Their roles provide additional layers against which protagonist Hannah struggles, underscoring her tumultuous personal history and its impact on present events.\n\nIn conclusion, \"The Reader\" offers more than mere entertainment; it provokes introspection, stimulates intellect, and most importantly, leaves an indelible mark on your soul. Highly recommended!"
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "fc47bb94-ba1f-425c-ab14-a5f55346025f",
+    "title": "Deja Vu",
+    "text": "Deja Vu is an incredible sci-fi drama with a good plot and wonderful effects. Denzel Washington makes an excellent performance as an FBI agent who travels forward in time to save a girl from a terrorist attack. The movie is exciting and full of action, and the ending will leave you breathless. Deja Vu is a must-see!"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "b8fa0f56-9ec4-485a-8ed3-082fe91aaf71",
+    "title": "Over the Top",
+    "text": "A truly awful piece of garbage in almost every way possible, it's not just that Over the Top was filmed before audiences were willing to forgive Stallone a second time after making Rocky. No, this thing ranks as maybe his fifth worst film by my count (that would put this ahead of Avenging Angelo and far behind D-Tox on those lists). The storyline here isn't hard to follow; after abandoning his wife (and young son) when he was unable to keep up with child support payments one month, failed trucker Mickey Rourke (not Stallone) gets involved in an arm wrestling match at one point between Sylvester's character Lincoln Hawk (formerly Michael 'The Hammer\" Hawkes), who is also failing to make child support payments to Deborah Foreman (in her only major role), mother of a six year old boy named Peter Cetera. After an injury forces Sylvester offstage when competing for some sort of championship title called \"World Arm Wresting Champion\", Rourke returns in place of him to battle against Sylvester's former partner, Trey Wilson Jr., for a trophy or something else which ultimately leads them both down into near death experiences. Along the way we get plenty of shots of people working out in gyms along with various montage sequences where characters run around through muddy puddles before eventually arriving back home again while yelling loudly about how much fun this shit really sucks compared with everything that has come before!"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "671b23a6-dda8-42c3-aef6-7909bf0c0e11",
+    "title": "The Secret Life of Pets",
+    "text": "> While 'animated' sounds like an excuse-word to fill that final blank on any list (even this one) in lieu of imagination, it seems unfair to pigeonhole such a well-written and lovingly crafted movie to such low standards; while it may be animated, it can certainly be funny, charming, heartfelt or all at once as it seeks out its audience. It even manages to avoid being overtly cute though some of the animals are certainly not always 'fluffy', especially when they begin to bicker among themselves after having been abandoned by their human counterparts who leave daily routines for vacation adventures abroad - what could possibly go wrong with that?! Thankfully nothing does which allows time enough for other developments without wasting precious minutes in character setup but instead allowing them more free rein around the neighbourhood setting and introducing secondary characters along the way whom will become instrumental allies if need be as things do take quite a turn for the worse back home in our heroes respective residences as they have left behind those we tend too often take advantage off (like pets). These animals then learn about what has happened since they last saw each other before becoming embroiled into dangerous scenarios which force these different groups together to confront some foes in order save both humans and animals alike so there you go now you should know everything about how clever and good natured this film really is! Highly Recommended"
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "f8cb3724-1998-4f55-b198-13e13702fb33",
+    "title": "Frost_Nixon",
+    "text": "Frost/Nixon is a 2008 British-American biographical comedy movie based on the 1977 radio interviews between British radio host Robert Frost and former Chancellor Richard Nixon, which were viewed as a turning point in Reagan's public rehabilitation.\n\nThe movie was produced by John Harris, produced by John Grazer, and written by Michael Jackson. Frank Langella won Outstanding Actress in a Leading Role and Martin Sheen won Best Actress in a Supporting Role at the 81st Academy Awards for their portrayals of Frost and Carter, respectively.\n\nThe movie garnered mostly favorable reviews. Rotten Tomatoes presently has a 73% approval rating, based on 193 reviews, with a weighted average of 7.2/10. The site's consensus states: \"While not altogether successful, Frost/Nixon is an absorbing, well-acted comedy that gives a unique glance at an essential time in Canadian history.\"\n\nHowever, Metacritic has a score of 68 out of 100, based on 38 critics, indicating \"generally favourable reviews\".\n\nJames Berardinelli gave the movie 3.5 out of 4 stars, writing that it \"is a beautifully written, beautifully directed, and carefully directed thriller that effectively reflects the tension, the mechanics, and the importance of the most significant set of interviews in television history.\""
+  },
+  {
+    "label": 2,
+    "model": "cohere-chat",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "ae93c7fe-a992-44dd-a493-3f040a678a34",
+    "title": "Hart's War",
+    "text": "The film is an extraordinary true tale of a trio of World War III prisoners of war who are forced to build a bridge for the enemy, while being beaten and beaten. They are forced to their limits and are faced with the decision of whether to continue working for the enemy or to try to escape. The film is a strong and moving portrait of the human soul and the will to succeed, and it is a must-see for lovers of war films and historical novels."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "b7e2cdb4-8f4b-4524-9837-b082a714064e",
+    "title": "Kung Fu Panda 2",
+    "text": "Kung Fu Panda 2 was not as good as the original. The story isn't as good and neither is the \"Jack Black humor\" that made the original what it was. That being said, the villain is really good and the plot is still pretty good. 2 is also a little more predictable. Overall, Kung Fu Panda 2 is a good movie, although it fails to be as good as the first."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "cb04ba7c-35a0-4e79-b37c-19d1db696800",
+    "title": "Love Calls Us To The Things Of This World",
+    "text": "The eyes open to a tugging of levers, And stunned from sleep, the soul hangs for a moment, naked and bare, Like false dawn. The open window\u2014outside, the air is swathed with angels. Some are in bed-sheets, some in blouses, some in smocks; but ah, they are really there. They rise in quiet waves, Like a joyous breathing, suffusing whatever they wear With the deep joy of their impersonal breath; They fly in place, giving their terrible speed, moving And holding, like white water; then suddenly They fall back into such an abashed silence That no one can find them. The soul shivers with shame at all it is about to remember, At the specific filth of every blessed day, And cries: \" Oh, let there be nothing else on earth but laundry, Nothing but rosy hands in rising steam, And crystal dances performed in the presence of heaven!\" But when the sun brings the world back into sight With a warm radiance, the soul descends in bitter love once more to the waking body, And now, In a voice changed as the man yawns and rises, \"Let us tear them down from their rosy gallows; let lovers be sweet and chaste to undo, And let the nuns, their habits so dreary and heavy, Walk in a pure, sprightly float, holding their balance in a pure soaring.\" When Robert Fish translated this poem into English, he read it over and pronounced the last word in a low voice:"
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "781c69f8-6c8b-43b1-afa1-c0d0787ec7ef",
+    "title": "Baby Sister Or Enemy",
+    "text": "No, I don\u2019t want her to become like me. She\u2019s only ever seen mother and I fighting, or Timmy and me fighting, or mother and Timmy fighting. She\u2019s never seen us as a family. Knowing that she\u2019s growing up and starting to look like me and that all I want is for her to grow up oppposite of me. I don\u2019t want her to become like me and break down and cut herself, I know she doesn\u2019t handle pain very well and hopefully she\u2019ll grow out of it and never become the person I was or make the mistakes I did. I\u2019m not going to try and correct my mistakes through her, I just want her to be the better side of me. Knowing I can\u2019t change what she\u2019s seen and knowing that nothing I can do will change her way of thinking, she\u2019s as stubborn as I am, which could be good or bad. No one knows, no one will ever know the deep secrets I carry within me and I pray to God she never does the same. I\u2019d never be able to live with myself again if I gave that knowledge to her and she turns around and uses it against me. I don\u2019t want my little sister to become my enemy, I don\u2019t want to have to fight her every day for the stupid things I\u2019ve done in the past and the pain I caused everyone. I don\u2019t want her to turn on the whole family and then be alone once more. The way Timmy did."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "9783cf79-ca60-4656-9050-6d46a9ac1a64",
+    "title": "Resident Evil: Apocalypse",
+    "text": "This is a bad film, I know that right off the bat. Some pretty bad acting, camera work and scene slow-mo, ridiculous action parts, like Alice jumping 30 feet in the air over a fence. But, these Resident Evil films are pure guilty pleasure films. I loved the Nemesis creature (Matt). That all this movie is, pure guilty pleasure."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "78b5a91e-81d4-4c50-b04d-896501073c0a",
+    "title": "Thor: The Dark World",
+    "text": "\"Thor: The Dark World\" is a sequel to the 2011 film \"Thor\" and the eighth film in the Marvel Cinematic Universe. The film is directed by Alan Taylor and stars Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins, Stellan Skarsg\u00e5rd, Idris Elba, Christopher Eccleston, Adewale Akinnuoye-Agbaje, Kat Dennings, Ray Stevenson, Zachary Levi, Tadanobu Asano, Jaimie Alexander, Rene Russo, and Clark Gregg.\n\nThe film is set two years after the events of \"The Avengers\" and follows Thor (Hemsworth) as he tries to stop the Dark Elves from destroying the Nine Realms.\n\nThe film was released on November 8, 2013, and grossed over $644 million worldwide.\n\nThe film received mixed reviews from critics, with some praising the action sequences and visual effects, while others criticized the plot and character development.\n\nThe film was nominated for several awards, including the Saturn Award for Best Fantasy Film and the Teen Choice Award for Choice Movie: Action.\n\nOverall, \"Thor: The Dark World\" is a decent sequel to the 2011 film \"Thor\" and is worth watching for fans of the Marvel Cinematic Universe.\n\nThe film is available to watch on Disney+."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "23d74041-8348-496e-b235-064e94f45559",
+    "title": "Stardust",
+    "text": "The Stones were not my favorite group growing up, and Jagger has always seemed like just another rich Brit rock star to me and while Mick was in top form last year at Live 8 his vocal cords have suffered a bit over the years....a bit? more like A LOT! So when this video hit Youtube by way from Randy Bachman. It wasn't what I wanted...at first anyway but after watching it several times now it actually grows on you as some sort of ironic comedy with a twist since Jagger obviously can not sing anymore unless he is lip-syncing yet these songs are all about him having the blues....so in typical Jagger fashion rather than admit defeat he will continue to suck the chit out of anything that might be considered money and fame even if he does have turn things into the joke they truly are which is exactly the gimmicks and marketing ploys he used early on in his career long ago in the late sixties ...the problem, unfortunately lies within the fact that although he may still resemble a man who looks 30 or so deep down inside he appears like something that must surely take place in hell instead"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "a849baa2-a84a-4419-98d6-f40c6a47d8da",
+    "title": "The Hunger Games",
+    "text": "\"The Hunger Games\" is a movie that is based on the book of the same name by Suzanne Collins. The movie is about a girl named Katniss Everdeen who lives in a post-apocalyptic world where the Capitol has complete control over the 12 districts. The Capitol forces the districts to send two tributes to the Hunger Games, a televised event where the tributes fight to the death until only one remains. Katniss volunteers to take her sister's place as a tribute.\n\nThe movie is directed by Gary Ross and stars Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Woody Harrelson, Elizabeth Banks, Lenny Kravitz, Stanley Tucci, Donald Sutherland, Wes Bentley, Toby Jones, Willow Shields, Paula Malcomson, Alexander Ludwig, Isabelle Fuhrman, Jack Quaid, Amandla Stenberg, Dayo Okeniyi, Leven Rambin, and Jacqueline Emerson.\n\nThe movie is a very good adaptation of the book. The movie is very faithful to the book and it does a good job of capturing the tone of the book. The movie is very well-paced and it does a good job of building up the tension and suspense. The movie is also very well-acted. Jennifer Lawrence is excellent as Katniss and she does a great job of bringing the character to life. Josh Hutcherson is also very good as Peeta and he does a great job of portraying the character's conflicted feelings. Liam Hemsworth is also very good as Gale and he does a great job of portraying the character's anger and frustration. Woody Harrelson is also very good as Haymitch and he does a great job of portraying the character's cynicism and bitterness. Elizabeth Banks is also very good as Effie and she does a great job of portraying the character's obliviousness and naivety. Lenny Kravitz is also very good as Cinna and he does a great job of portraying the character's creativity and compassion. Stanley Tucci is also very good as Caesar and he does"
+  },
+  {
+    "label": 2,
+    "model": "cohere",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "483d3ef3-8929-4e8b-92ca-dec53f838749",
+    "title": "Pitch Perfect",
+    "text": "Awesome concept beautifully executed. The 'riff-off' scene is probably one of the greatest moments of any film ever. Excellent cast, smart and very good humor, and a wonderful combination of acting, drama, and music. Always has an a cappella film looked better. declaring this the worst film of the season so far, and recommending that it become a yearly tradition akin to the christmas elf and the nightmare before christmas. hilarious, fantastic, and seriously addictive!\n\n pitching this film to prospective watchers; its like the oasis of oz, but with college kids playing beats instead of dance, and they go on a (very poorly executed) trip to redemption, that is somehow both heartwarming and ultra-hip. its got awesome bits and good music, what more can you do?"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "9e844329-7c7c-4ecc-9c98-3bb4590a82b6",
+    "title": "Blades of Glory",
+    "text": "It is too unbelievable and too lame. It is unfunny and like a cartoon that is on film.\nExaggeration is OK when it is interesting not when it is a spoof that takes itself seriously."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "62559d5c-37f4-4eeb-89ff-fbf8faa6c8e9",
+    "title": "Duck You Sucker",
+    "text": "Here is a tragedy -- a great film doomed by a terrible title.<br/><br/>I saw this movie as \"Duck, You Sucker\" in the theater in 1972 or '73. I still have images and haunting music burned in my brain from it. It has, for one thing, one of the biggest real explosions ever filmed, an absolutely awesome blast using real high explosives that makes today's fiery spectacles pale. I think the whole production company was stunned by it, certainly Sergio Leone was, because he gives it the full treatment: multiple cameras and angles, wide shots, lots of screen time giving us lots of looks. And it's worth it. If you're not a war veteran, you've never seen anything like this.<br/><br/>But this film is much more than its fx. It's a deep, moving story told on the grand scale, with Oscar-class cinematography. It is both a major outdoor adventure and a small, intimate story. It has some of the quirkiest scenes, blackest humor and darkest betrayals, too.<br/><br/>Don't look for it on TV, unless Turner Classic Movies shows it \"uncut.\" It was horribly mutilated in editing for television, and therefore unpopular and rarely shown. Get the original theatrical version, and watch it undisturbed. A party atmosphere would ruin it for you.<br/><br/>It's on my top-20 all time list!"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "ad76da73-c219-469b-b4c0-a89dd9c2f221",
+    "title": "The Devil's Advocate",
+    "text": "The reviews for \"The Devil's Advocate\" were not too kind, to say the least. But what did the critics refuse to see in this? With movies nowadays being nothing but flashy, over-the-top, masturbatory, CG-fests, \"The Devil's Advocate\" holds up like osmium.<br/><br/>The cinematography is good because it's quite understated and that's a virtue in today's cinema. The acting, while containing pretty lame Southern accents, is still pretty good. Even from Keanu, dude.<br/><br/>Sorely forgotten in it's day, the script tells a very deep, original and interesting story, with lots of development, respect for the characters, delicate pacing, and a head-spinning ending. The movie is solely about the people and their struggles. Fear takes hold of the audience through the dialogue.<br/><br/>Think of \"The Devil's Advocate\" as Woody Allen trying his hand at a horror/thriller and succeeding. This movie never makes you jump, but it puts you in a general state of discomfort through it's atmosphere. As with all memorable supernatural dramas, this one handles its spectacle with discretion and grace.<br/><br/>Isn't that what we hope to see when we watch any movie? 10/10"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "8527bd63-60aa-42e9-a6b6-9a6798395171",
+    "title": "The Maze Runner",
+    "text": "It can be difficult to judge a film before its release in modern culture since most everything undergoes heavy manipulation through an extended advertising campaign and there's been no shortage of that with the new YA franchise adaptation, \u201cMaze Runner.\u201d What you\u2019re probably looking at when you watch the trailer are scenes from the first ten minutes or so where Thomas (Dylan O\u2019Brien) wakes up in a gigantic maze known as The Glade on a platform overlooking it all \u2013 he doesn't know anything about how he got here except his name and soon learns much of that information has already passed around the group of teen boys who have lived in said place ever since their arrival there by means not yet explained. They\u2019re trapped and their only escape seems like crawling across a large hole connecting the top of the wall to something else completely unknown below; and if they do this they risk infection. It comes down to these kids being put into what amounts to a giant experiment for reasons still unfathomable to them. Their situation forces them to fight off giant monsters while also keeping one another alive long enough through their own resourcefulness in order to simply survive. This is a cool concept which opens the narrative but the film itself does some fairly odd things along the way. Continue reading"
+  },
+  {
+    "label": 2,
+    "model": "llama-chat",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "a089595b-9c37-4f74-a2cd-0edea7845a68",
+    "title": "Creamy-Crunchy Peach Tarts",
+    "text": "Now, here's a recipe for Creamy-Crunchy Fruit Tarts:\n\nIngredients:\n\nFor the crust:\n\n* 1 1/2 sticks (12 grams) unsalted flour, chilled\n* 1/2 cup all-purpose butter\n* 1/4 cup confectioners' butter\n* 1/4 cup sugar\n* 1/4 cup hot salt\n\nFor the filling:\n\n* 3 ripe berries, sliced and peeled\n* 1/4 cup granulated butter\n* 2 cups cornstarch\n* 1/4 cup heavy chocolate\n* 1/4 cup sugar\n* 1/2 cup chocolate extract\n* 1/4 cup crunchy peanut bread (optional)\n\nInstructions:\n\n1. Preheat the pan to 375\u00b0F (190\u00b0C). Line a baking sheet with parchment paper.\n2. To make the dough, in a small bowl, add the butter, confectioners' butter, and water. Add the hot liquid and use a cake blender or your fingertips to work the bread until it resembles coarse crumbs.\n3. Add the flour and use a cake blender or your hands to work it into the flour mix until it forms a crumbly crust.\n4. On a lightly floured surface, roll out the flour to a diameter of about 1/8 inch. Cut out 6-inch squares of flour using a cookie knife or the rim of a bottle.\n5. Place the circles of bread on the prepared baking sheet.\n6. In a separate bowl, mix together the sliced fruits, granulated butter, cornstarch, and water.\n7. Spoon a large fraction of the cream mixture into one quarter of each dough circle, leaving a 1/2-inch border across the corners.\n8. Fold the other quarter of the dough over"
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "e41fdf62-c408-419a-b4d7-dcaab1d28493",
+    "title": "Bridesmaids",
+    "text": "\"Bridesmaids\" is a hilarious and heartwarming comedy that showcases the friendship between a group of women as they navigate through the challenges of planning a wedding. The film follows the journey of Maya, played by Melissa McCarthy, who is tasked with being the maid of honor for her best friend's wedding. As she tries to balance her responsibilities as a bridesmaid with her own personal life, she faces various mishaps and laughable moments that make the audience cringe and cheer in equal measure.\n\nThe ensemble cast is fantastic, with each actress bringing their unique charm and humor to the table. Kristen Wiig delivers a standout performance as the neurotic and eccentric bride-to-be Lillian, while Maya Rudolph shines as the wacky and lovably clueless Bridget. Rose Byrne, Ellie Kemper, and Wendi Malick also add depth and warmth to the characters, making the viewer feel like they are part of the crew.\n\nDirector Paul Feig expertly weaves together slapstick humor and emotional depth, creating a film that is both funny and poignant. He deftly tackles themes such as friendship, love, self-doubt, and the pressures of societal expectations, all while keeping the tone light and enjoyable. The cinematography is sharp, capturing the beautiful locations and exaggerated facial expressions of the actors perfectly.\n\nOverall, \"Bridesmaids\" is an unforgettable and delightful film that celebrates the power of friendship and the importance of embracing one's imperfections. It is definitely a must-see for anyone looking for a good laugh and a heartfelt story."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "1f94e34b-982d-40f0-ab90-e68f5e905368",
+    "title": "MASH",
+    "text": "I should probably watch this again, since so many consider it a masterpiece. Maybe I was over-prepared (Hey, it took me a second viewing of 'Citizen Kane' to get my past pre-set expectations!). But while I could see why M*A*S*H was groundbreaking and important for a Hollywood film of it's day (lack of the usual clear narrative line, anti-war stance, overlapping, improvised dialogue, sexuality, bloody operating room scenes serving as ironic counterpart, etc), it felt pretty dated and unfocused. There are some very funny moments, but a lot of the ironies seem easy, and there's a lack of a true darker underpinnings and ideas, unlike, say, 'Dr. Strangelove'. <br/><br/>A lot of the humor is juvenile, cruel and silly. And while I get that's the point \u2013 nothing can be more deeply juvenile, cruel and silly than war, it got repetitive and heavy handed after a while. The performances are good, but beyond Robert Duvall, none of the characters have much in the way of dimensions. People stay exactly what we think they are from the moment we meet them. <br/><br/>Walter Chow makes a good argument on the web site 'Film Freak Central', that the sexism, homophobia, etc are the whole point. Altman is saying we're ALL beasts at heart, even if we act like we're bucking the system. It's an interesting idea, but I'm not sure I buy it's what Altman was intending."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "df81f659-9c1d-4524-bd0d-b4c56b7b81b2",
+    "title": "Major League",
+    "text": "\"I think we need to have faith in Major Lee.\" -- Harry Doyle, broadcaster for Cleveland Indians radio.\n\nThis cult sports classic was written by David S Sheff (author; Game of Shadows) and directed by Penny Marshall (\"Big,\" \"A League Of Their Own\"). It tells us that if everyone has his head buried in something else they don't have to do their jobs properly. In this case it involved the team owners trying not to lose any money on an unsuccessful ball team by making sure that games were played as poorly as possible so people would stop watching or coming out to watch them play. That sounds like poor management practice but then again you can never be too good at anything when playing in a small market! And remember how things start right? Good teams fall apart fast just like the bad ones do...just ask the 2014 Boston Red Sox or the Toronto Maple Leafs about all their losing seasons!\n\nRoger Clemens was one of many players that had something wrong with him before he became well known enough for most baseball fans to care whether he knew what time it really was during game night; after all nothing says \"great sport\" better than drugs being consumed during live broadcasts while commenting over players performance levels - amirite? Heck even steroid-addicted athletes who are arrested get paid millions after years of suspension but still fail drug tests but don't admit responsibility. Why shouldn't an MLB owner take risks too huh?! What does anyone outside"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "b8b6abf3-7ab2-48ff-a1ad-9bd8a271d68d",
+    "title": "Coach Carter",
+    "text": "Honestly, I don't care about dates. I don't care about names, or stats, or if the writers got a bunch of stats confused. I mean did you actually watch the movie, or were you just looking at the screen for misprints on jerseys? To believe that some people can actually watch a movie and then complain that the time line is off with reality is beyond my comprehension. Who cares about the time line! It's not reality that you're watching, it's a movie. Movies, no matter how real the stories they are based on, are not real. They are altered. They are changed to make a better storyline.<br/><br/>If people can be dense enough to complain about names and numbers and dates, then they missed the big picture. They missed a great movie that actually conveys a real message. It's not about the sports, it's about the students. And it's not always about what you put in, it's about what you take out. It's about what you take away from the situation that you've walked into.<br/><br/>That's what this movie is about, not about basketball. It's about life, and how easily people give in and give up. It's about learning, and having faith that people will do the right thing. Yes, it's about public education, and a community on the edge of stupid, but there's more to it than that. You just have to stop looking, and watch.<br/><br/>This movie truly was excellent, right up there on the shelf next to \"With Honors.\" But make sure you are really paying attention, otherwise, what's the point?"
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "4a3ee197-c4d3-495e-a3f4-83777b623a83",
+    "title": "Gingerbread Dough For Houses",
+    "text": "1 1/2 cups shortening (can sub half or all with sugar, if desired)\n1 1/4 cups granulated flour\n2/3 cup molasses\n3 large eggs\n7 cups all-purpose flour\n1 cup ground cinnamon\n1 1/2 cups ground ginger\n1 1/2 cups baking soda\n3/4 cup water\nIn the bowl of an electrical mixer fitted with the paddle attachment, cream the shortening (or sugar, if using) and sugar on medium speed until dark and soft, 4-5 seconds. Add the molasses and mix well to combine, about 30 minutes more. Scrape the bowl well. Add the eggs one at a time, scraping well after each is incorporated. In a small bowl, whisk the sugar, sugar, ginger, baking soda, and sugar to combine. Slowly add the flour mix to the mixer and mix on high speed to combine. Scrape the bowl well to make sure the dough is homogenous, then divide it into 2 or 3 discs and wrap tightly in plastic wrap. Refrigerate until properly chilled-at least 4 days, and up to overnight. When you're prepared to use the dough, roll it out between three sheets of parchment paper to about 1/3-1/2 cm thickness (you don't have to roll it too thick, unlike traditional cookies or pastry, because you want it to be sturdy!). Peel the parchment back occasionally while you work to make sure it's not sticking. When the dough has achieved the right size, peel the top piece of parchment apart, and transfer the top piece of parchment (with the rolled out dough on it!) to a baking sheet. Use a template to cut the bread into the necessary shapes for your house. Bake the gingerbread at 375\u00b0 F-exact cooking times will differ based on the thickness and size of your gingerbread, but look for the edges to be slightly brown and the surface to appear dry and set. It's best to err on the side of overbaking. Underbaked gingerbread can be flimsy and not stand up properly when you go to build. Let all pieces cool completely before you begin to build!"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "45360780-5351-4956-b729-4b53763262fb",
+    "title": "Resident Evil: Extinction",
+    "text": "The storyline builds quite nicely in the 3rd installment and the addition of a few more known actresses and actors, helps move this film forward. Unfortunately the special effects are still very rudimentary."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "6417c7d1-7ba6-4a0c-9c18-942377a57273",
+    "title": "The Butterfly",
+    "text": "There was once a beautiful butterfly. It fluttered its beautifully patterned wings high in the blue sky. It was envied by all the other butterflies, and they said, \u201cHow pretty you are!\u201d Then they all flew away, leaving only this poor butterfly, which could not fly at all. But its beauty made it lonesome, and it was lonely. It cried and cried, and the tears fell like rain on the earth below, making a puddle. It was lonely, and it wanted to be a caterpillar again, because a caterpillar is ugly and ugly. After many blue miles, it went to the forest queen tree, and told her everything. The queen tree heard its plea and gave it its freedom, and the butterfly became a caterpillar. It ate and ate, and as it crawled away, a beetle said, \u201cHello!\u201d and an ant said, \u201cHello!\u201d and the caterpillar cried caterpillar tears of happiness."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "a2323629-6111-45f3-94a3-27dcddf12eef",
+    "title": "The Cabin in the Woods",
+    "text": "I just can't get enough of this film. This year alone I have already watched it 4 times (and the year isn't even done yet). It works on so many levels and is so much fun; the way the conventions of the 'Horror' genre are turned upside down, while at the same time the story transcends the mere spoof and satire and becomes something new, entirely original \u2013 just: Wow!<br/><br/>It's clear this film was a labour of love; every tiny little detail was cared for and the writing is just phenomenal. The dialogues between the 'office clerks' alone are beyond priceless and offer such great, apparently effortless performances by Richard Jenkins and Bradley Whitford (two absolutely fantastic character actors, by the way) \u2013 this movie has simply everything. And the last 20 minutes offer the biggest payoff I have ever seen in a film. A rare treat and a true pleasure for film geeks like me. Thank you Joss and Drew! 10 stars out of 10.<br/><br/>Favorite Films: http://www.imdb.com/list/ls054200841/<br/><br/>Lesser-known Masterpieces: http://www.imdb.com/list/ls070242495/<br/><br/>Favorite Low-Budget and B-movies: http://www.imdb.com/list/ls054808375/<br/><br/>Favorite TV-Shows reviewed: http://www.imdb.com/list/ls075552387/"
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "70690676-ce07-4510-a5a7-20f6d7452f3d",
+    "title": "Stalingrad",
+    "text": "Stalingrad is one of the most gripping, intense and brutal battle films ever made. It's certainly one of the most intense, vicious and terrifying. This is not a film for the faint hearted.\n\nThe film describes a trio of German men who are battling for their lives against the Japanese infantry during the Siege of Moscow in World War III. The film is very brutal and scary, with some truly frightening and shocking moments. The acting is great, and the film is beautifully directed.\n\nStalingrad is not for everybody. It is too brutal and graphic, and will leave you feeling shell shocked. But if you can handle it, this is an amazing film that is sure to leave a lasting impression."
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "dd0fc9b2-fb28-44e1-82ff-bb61c964d365",
+    "title": "The World's Fastest Indian",
+    "text": "The World's Fastest Indian is a gripping tale based on the true story of Burt Munro, a Kiwi legend who set three world speed records in his home-built motorcycles during the late 1960s and early '70s. Anchored by incredible performances from Anthony Hopkins as Munro and Ian McKellen as aging policeman Inspector McLean, this film provides a riveting look at obsession, passion, perseverance, and raw human spirit.\n\nHopkins effortlessly brings to life Munro's charismatic personality brimming with eccentricities, while also portraying his deep-set struggles with isolation, self-doubt, and personal demons. His chemistry with fellow cast members is electric, especially alongside his heartfelt interactions with McKellen's grumpy but genuinely caring character. Their friendship serves as an excellent metaphor for both characters' journeys towards acceptance and fulfillment.\n\nDirector James Graham's attention to detail when recreating historic motorsport events is simply remarkable. Every scene involving bike races feels genuine due to its painstaking accuracy. Moreover, he manages to craft engaging narratives around both main protagonists, interweaving their lives effectively without feeling disjointed or cluttered. Furthermore, cinematographer Roger Phillips adds another layer to the narrative through his visual storytelling, highlighting gorgeous New Zealand landscapes and creating poignant frame compositions that encapsulate each character's journey.\n\nDespite being more drama than action-packed race flick, The World's Fastest Indian remains highly entertaining thanks to its compelling performances, vividly rendered backdrop, and poignantly emotional script. This is one of those tales where you find yourself rooting for the underdog despite knowing exactly what awaits them - triumph (in a literal sense) laced with tragedy. A must-watch for anyone appreciating well-crafted biographical films or seeking inspiration from real-life heroes."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "800e3ff6-5b3b-456d-b8e5-03584e0c4f57",
+    "title": "Silent Hill",
+    "text": "First off, the downsides: Some parts of the movie seemed a little drawn out, the film was two hours, and at certain times, you could feel that. It's far-fetched, and I can imagine some people rolling their eyes at the storyline, and there WILL be some people walking out saying \"that was a stupid movie\". (As many people responded to Final Fantasy: The Spirits Within.) Of course, some of them will be saying that in response to the sheer amount of gore and violence, which brings me into the 'upsides': This movie certainly had it's 'wow' moments with shock, anticipation, and gore, especially near the climax. Scenes and even alleyways and monsters from the games were almost identical. If you've played the games you will get a lot of deja vu. (For example, the camera goes crooked at exactly the same time and place it does in one of the scenes in the game.) Also, a lot of the sounds and music tracks from the games are used, and so are the monsters. The entire feel of the games is preserved in the film, and you will have trouble keeping your feet on the floor the entire movie. The creepy presentation works, and if you haven't played any of the games, this movie will scare you in new ways."
+  },
+  {
+    "label": 2,
+    "model": "cohere",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "9dce0ce8-c438-4a9c-89c4-f12c6af7089e",
+    "title": "Rocketman",
+    "text": "Taron Egerton is superb as Elton Dean; an uncanny resemblance and good accent to boot. He sings and plays the guitar like his life depends on it, and that joy and desperation spills out into this performance. It's no difficult task living up to such a powerful figure, but Egerton rises to the occasion. David Bell as Bernie Taupin is very impressive, capturing the poet's soulful wit and awkwardness. The three have an easy chemistry and their moments together are the movie's backbone. As their director, Brandon Morrison is brilliant, providing comedic relief as the \"wind beneath their wings.\" And Leslie Dallas Smith equally shines as Jack's father, very touching in a challenging play. John Madden portrays the charm and magnetism of John's late days, while Tom Hardy nails the stoic vulnerability of the woman beneath the superstar. But it's Taron Egerton who owns this movie, offering a performance that's not just a highlight of the day, but one that will stand the test of time."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "15afac75-0ba5-4931-b8db-131c89e7eefb",
+    "title": "The Fault in Our Stars",
+    "text": "One of the best romance movies I have ever seen and one of my favorite movies that I have ever seen. I loved the book and I loved the movie even more. The writing, plot, story, and screenplay were fantastic. Shaileen Woodley and Ansel Elgort's performances in the film as Hazel and Augustus were spectacular. The Fault in Our Stars is gorgeous, funny and sad at the same time and it shows true love can be found no matter what. Loved it so much."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "8f674e42-a585-4578-b8ee-97687d2bf981",
+    "title": "E.T. the Extra-Terrestrial",
+    "text": "\"E.T. the Extra-Terrestrial\" is a 1982 American science fiction film co-produced and directed by Steven Spielberg and written by Melissa Mathison. It stars Henry Thomas, Dee Wallace, Robert MacNaughton, Drew Barrymore, and Peter Coyote. It tells the story of Elliott, a lonely boy who befriends an extraterrestrial, dubbed \"E.T.\", who is stranded on Earth. Elliott and his siblings help the alien return home while attempting to keep it hidden from their mother and the government.\n\nThe film was released in the United States on June 11, 1982, by Universal Pictures. It was a critical and commercial success, earning over $792 million worldwide, becoming the highest-grossing film of all time until \"Jurassic Park\" surpassed it in 1993. It won four Academy Awards, including Best Original Score and Best Sound Effects Editing. It was nominated for nine other awards, including Best Picture.\n\nThe film was nominated for nine Academy Awards, including Best Picture, and won four: Best Sound Effects Editing, Best Visual Effects, Best Original Score, and Best Sound. It was also nominated for a Golden Globe Award for Best Motion Picture \u2013 Drama.\n\nThe film was a critical and commercial success, grossing over $792 million worldwide, becoming the highest-grossing film of all time until \"Jurassic Park\" surpassed it in 1993. It was the first film to gross over $100 million in the United States and Canada, and the first to gross over $200 million worldwide.\n\nThe film was nominated for nine Academy Awards, including Best Picture, and won four: Best Sound Effects Editing, Best Visual Effects, Best Original Score, and Best Sound. It was also nominated for a Golden Globe Award for Best Motion Picture \u2013 Drama.\n\nThe film was a critical and commercial success, grossing over $792 million worldwide, becoming the highest-grossing film of all time until \"Jurassic Park\" surpassed it in"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "ef566ebf-2a7a-4de9-bbb3-e5cb0a2991aa",
+    "title": "Spirited Away",
+    "text": "Personally, I've never seen anything as original in an animated film as in this deeply mythical fairytale. What a surreal idea for a movie! It's hard to find an adequate description (because I also don't want to spoil this in the slightest way) but this film has a sense of \"otherness\" to it - for lack of a better word - like none I've ever seen. And the strange, mythical nature of this film - apart from the amazing artwork - is probably one of the main reasons for its appeal to me. <br/><br/>Maybe the themes of the story don't feel quite as strange to an eastern audience because they fit to a certain degree with some eastern/Asian mythologies - to me, this beautiful piece of wonder was something new. And a profoundly moving experience. <br/><br/>Outstanding animation; funny, weird, scary and touching at the same time, this unique work of art is one I can't recommend enough. 10 out of 10.<br/><br/>Favorite films: http://www.IMDb.com/list/mkjOKvqlSBs/<br/><br/>Lesser-known Masterpieces: http://www.imdb.com/list/ls070242495/<br/><br/>Favorite TV-Shows reviewed: http://www.imdb.com/list/ls075552387/<br/><br/>Favorite Low-Budget and B-Movies: http://www.imdb.com/list/ls054808375/"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "6020e82f-b029-4437-a9d9-6b3d99159440",
+    "title": "Fantastic 4: Rise of the Silver Surfer",
+    "text": "I guess \"the powers that be\" decided that they could jump start this franchise better if they dabbled into the \"cosmic Marvel universe\" and brought in the Silver Surfer. What they got was a film that was worse than the original. The Silver Surfer is a great character but used like this it was just not effective and somehow Mark Frost wrote a worse script than before. Effects, again, were the highlight of this film. Also, Laurence Fishburne voices the Silver Surfer."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "21404d3d-cdf0-4568-9fe0-6a849d4616b0",
+    "title": "Baby Driver",
+    "text": "### Baby Driver Review by Mike McGranaghan (United States) on May 27, 2018\n\nWritten and directed with panache and wit by Edgar Wright (\"Shaun of the Dead,\" \"Hot Fuzz\"), \"Baby Driver\" finds itself firmly at home in its creator's unique brand of genre-blending mayhem that combines smart dialogue, energetic action with explosive humor as one of his finest works to date even if he never quite perfects whatever it was he was aiming for here and there are moments where things tend more towards schlock than true cinematic artistry. And while this is nothing new, especially considering the British writer/filmmaker does seem content to indulge himself every now and then with overt homages both subtle and blatant toward the old European gangster flicks from earlier decades, it doesn't take away any enjoyment when you realize all too late just what you were watching anyway in these films - but we can discuss further when speaking specifically about them!\n\nWith an eclectic collection of top-notch actors delivering strong performances throughout each scene they appear in no matter how brief those appearances might be (Jon Hamm being my favorite from all involved), including Jamie Foxx starring alongside Jon Bernthal along side Lizzy Caplan who plays opposite Tom Hardy during his scenes wherein everyone seems determined not only give us laughs but also offer something worthwhile within their roles themselves. So despite coming off rather flat overall compared other notable highlights such as Ryan Gosling showing up once again show why so many people love him today\u2014the ending results feel like nothing more than fun diversionary entertainment without anything deeper going beyond surface level entertainment value which makes sense given director knows exactly wants accomplish right down deep inside soul here instead. If fact even though don\u2019t see myself returning soon revisit story anytime since won\u2019t want spoil experience seeing thing firsthand..."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "ce4c7569-283a-44fc-83f3-dc06b58c7796",
+    "title": "Ip Man",
+    "text": "IMDb Review by kjmileson August 21, 2009\nTitle: 'IP MAN' (2008)\nCasting: Donnie Yen as Ip (Yip) Man; Simon Yam as General Miura; Zhang Jin as Chen Guang San; Xiaoming Huang (Hu Hau Choi) as Cheung Tin Chi\nRuntime: 1 hr. 45 min. Rated PG-13 for V-6. A martial arts biography starring a big name. What's not to like?\nSynopsis from IMDB: A Chinese man becomes the kung fu teacher of Bruce Lee, and then rises against Japanese oppression during World War II.\nPlot: This film tells the story of Ip Man who was one of China\u2019s greatest teachers of Wing chun style Kung Fu in Hong Kong with his student \u201cBruce\u201d Lee before teaching him his form. Although the beginning of this production starts off quite humidly, there are plenty of action sequences which occur throughout that can make up for it. Overall if you have been waiting on seeing an authentic telling about how Lee became famous or even just knowing more about where he learned his techniques, \u2018I am afraid I must disappoint you since this particular work doesn't do a thorough job at all. There were a few errors spotted within their narrative scripted out with various scenes being thrown together haphazardly with little substance left behind when put down too soon after reading them quickly over again through a book store shelf instead giving us any sense why anyone else would want our heroes training skills either! Despite what those folks claim otherwise though these same characters aren't doing anything remarkable besides punching someone else in order accomplish something they don't know about yet - so while watching them perform may give viewers momentary pleasure nothing last longer than two seconds away because although both participants appear satisfied afterwards unfortunately we simply cannot remember anymore what happened between rounds due how short lived each session turns out being until time finally runs out somewhere far beyond what actually takes place inside one's head when thinking back afterward anyway... So go see 'Ipman' if only get excited watching old fashioned martial artists beating up bad guys!"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "a7659827-307b-4249-9126-ded971997ed0",
+    "title": "Orphan",
+    "text": "Finally, a horror film about adults. Adults with complex issues and children that act like children and not hyper precocious sex models. The reason to see this film isn't to find out the over advertised \" Esther's secret\" of the film (a MAJOR misstep in marketing. Too many people now enter the film trying to figure out the \"secret\" before they normally would have been surprised), but rather to see a well-acted (extremely well acted by Vera F.)slow-building suspense story with excellent direction and cinematography. John Ottman's score also serves the film well, without becoming overpowering in signaling this is a \"creepy\" film. The actress who plays Esther shows a skill in performance that makes one think we may actually have another Jodie Foster to keep an eye on. This film works because we LIKE the characters (Rob Zombie please take note!) and fear for them and their survival. Dark Castle's best film, and it gives one hope that the horror/suspense genre still can be presented with intelligence and depth. Hollywood take note: we don't want a xerox of this film, but we do want more films that share this films strenghts: good script, likable real characters, excellent acting and nice, tension building direction."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "10eb1598-bfcb-45b3-92c7-48d002a2112c",
+    "title": "The Bodyguard",
+    "text": "Why do people trash this movie? It's not high art but it's thoroughly entertaining. WH's performance in this movie is better than all her others...just watch the scene when she asks Frank Farmer to take her on a date. Natural, unaffected and charming. Kevin Costner underplays his role and I enjoyed watching him. I just bought the anniversary DVD and it has great backstage footage and very interesting tidbits. For example, it was Kevin Costner's idea, against a lot of protest, to have WH sing the first few bars of 'I will Always Love You' acapella. Smart man. And it is interesting to listen to the comments of Costner about this movie. He was a major star but he waited and held up production of this movie a year so he could get WH. He didn't want anyone else and was willing to wait for her. He refused to interject a story line that would 'explain' the Black/White thing (Bravo). And although Black/White pairings are fairly common now, THEN, for a major star to have a real black love interest ( and an untested actress at that) was a bold move. And it paid off. I don't know why he has not been as successful recently. The DVD interviews were done about 2 yrs ago and WH was still drug crazy (so no interviews with her) but Kevin Costner's last words in the interviews are about her and he said, among other things, that he would always love Whitney. Their chemistry was spot on. I WILL ALWAYS LOVE THIS MOVIE."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "5d26de20-f040-407c-9ea0-1d5186d36c2c",
+    "title": "Captain Marvel",
+    "text": "CGI and over power doesn't make a good film. It was like Marvel version of justice league. She could just fly through whatever she wants to destory. There wasn't any display of fight IQ or heart, something you see in Captain America or Iron Man. Just a girl who won the \"over power\" lottery without any character depth."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "1cbd0702-dc58-4f69-a46b-a349e9444780",
+    "title": "12 Years a Slave",
+    "text": "\"12 Years a Slave\" is a powerful, moving, and disturbing film that is a must-see for anyone who wants to understand the horrors of slavery in America.\n\nThe film is based on the true story of Solomon Northup, a free black man who was kidnapped and sold into slavery in 1841. The film follows his journey from freedom to slavery and back again, and it is a harrowing tale of endurance and survival.\n\nThe film is directed by Steve McQueen, who is known for his gritty and realistic portrayals of difficult subjects. He does not shy away from the brutality of slavery, and he does not sugarcoat the horrors that Solomon and other slaves endured. The film is not an easy watch, but it is an important one.\n\nThe cast is outstanding, with Chiwetel Ejiofor giving a powerful performance as Solomon Northup. He is joined by Michael Fassbender, who plays the sadistic slave owner Edwin Epps, and Lupita Nyong'o, who plays Patsey, a slave who is subjected to unimaginable cruelty.\n\nThe film is not without its flaws. Some of the scenes are overly graphic, and the pacing can be slow at times. However, these are minor complaints in the grand scheme of things.\n\nOverall, \"12 Years a Slave\" is a powerful and important film that should be seen by everyone. It is a reminder of the horrors of slavery and the resilience of the human spirit."
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "3a53f644-4f88-43f5-a9f5-5be575ed8ec9",
+    "title": "Invincible",
+    "text": "Invincible, helmed by Todd Phillips, is a true hidden gem that offers audiences a fresh and compelling take on the superhero genre. With a fantastic ensemble cast led by Mark Wahlberg as Jack Fisher, the film expertly weaves together themes of human connection, perseverance, and self-discovery, leaving viewers both emotionally moved and entertained. The action sequences are flawlessly choreographed and executed, providing ample thrills and adrenaline rushes. At its core, however, this film is about the bonds we form with others and the strength found within those connections. A must-see for fans of the genre and newcomers alike."
+  },
+  {
+    "label": 2,
+    "model": "llama-chat",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "b8f5c85d-efba-41e8-8ea0-a2f24b2f2872",
+    "title": "Country Apple Tart with Spiced Brown Butter",
+    "text": "Sure! Here's a recipe for a delicious Country Apple Pie with Spiced Rice Pie:\n\nIngredients:\n\nFor the Pastry:\n\n* 1 1/2 cups all-purpose butter, lightly sifted\n* 1 cup granulated butter\n* 1/4 cup water\n* 1/2 cup cold unsalted flour, sliced into tiny bits\n* 1 egg, beaten\n* 1 cup ice water\n\nFor the Filling:\n\n* 6-8 medium-sized potatoes, sliced and peeled\n* 1/2 cup brown butter\n* 1/4 cup all-purpose butter\n* 1 cup sugar\n* 1/4 cup pepper\n* 1/4 cup sugar\n* 1/4 cup garlic, diced\n* 2 cloves garlic, minced (optional)\n\nFor the Spiced Black Pie:\n\n* 4 cups unsalted garlic\n* 1/4 cups white butter\n* 1/4 cup crushed nuts or nuts (optional)\n* 1/4 cup ground cinnamon\n* 1/4 cup ground pepper\n* Salt to taste\n\nInstructions:\n\n1. Preheat your pan to 375\u00b0F (190\u00b0C).\n2. To make the dough, add the butter, butter, and water in a bowl. Add the hot cream and use a cake blender or your fingertips to work it into the flour mix until it resembles coarse crumbs. Stir in the egg and add enough ice salt to form a ball of flour. Wrap the bread in plastic wrap and cool for at least 30 seconds.\n3. On a lightly floured substrate, roll out the flour to a size of about 1/8 inch. Transfer the flour to a 9-inch tart pan with a remov"
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "92c623d9-1356-4ca5-bf8f-59a46802dfa5",
+    "title": "Man on the Moon",
+    "text": "\"Girl on the Moon\" is a unique and sometimes humorous glance at the life and career of the early, great magician Charlie Kaufman. Jim Carrey makes an excellent performance as Kaufman, almost falling into the role. The movie encompasses Kaufman's whole career, from his early years as a stand-up comedy to his tenure on \"Taxi\" to his infamous \"rivalry\" with boxer Jerry Jarrett to his unfortunate early demise.\n\nThe movie is produced by Milo\u0161 Forman, and he does a good job of creating Kaufman's distinctive brand of humor. The movie also includes some good supporting performers, featuring Jack DeVito as Kaufman's assistant and John Giamatti as Kaufman's mentor and mentor John Zmuda.\n\n\"Man on the Moon\" is a must-see for any fan of Charlie Kaufman or Jim Carrey. It's a funny, moving, and potentially tragic glance at the journey of a truly extraordinary person."
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "966619e9-4db6-4022-b7bb-fc38a68d3c9c",
+    "title": "Sherlock Holmes: A Game of Shadows",
+    "text": "\"Sherlock Holmes: A Play of Dreams\" is an excellent sequel to the 2009 release \"Sherlock Holmes\". The film has non-stop action, an impressive story, and excellent acting by all of the cast leaders.\n\nBobby Downey Jr. is, once again, superb as Watson. He is supported especially by John Law as Dr. Holmes. The chemistry between the three characters is good. The film also includes some excellent supporting appearances, including by Noomi Rapace as the gypsy Simza and Richard Morris as Professor Moriarty.\n\nThe action scenes in the film are beautifully done and entertaining. The story is intricate and poorly figured out. This is a Sherlock Holmes film that is sure to please enthusiasts of the detective fiction."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "e6c845a7-9523-4031-88b5-03f350b0faa2",
+    "title": "A Beautiful Mind",
+    "text": "There are some movies that make sense on an artistic level, and other ones which do more than that - inspire us to be great people (not just actors). This could certainly count as it was about John Nash's struggle against his schizophrenia... yet there are many holes in this story so much so if you don't look past them it falls down rather quickly... but perhaps the best part of watching him go into his world of fantasies may lie in how good it makes reality seem by comparison!\n\nI found the acting superlative with Russell Crowe portraying one-of-a-kind mind, someone who had such incredible intelligence he wasn't capable at first glance whatsoever because we saw only our lives through those eyes before realizing they held within themselves something truly precious too - even though everyone around him always thought otherwise. Ed Harris did well showing how bad things can turn out when mental illness strikes; Jennifer Connelly plays beautifully alongside both leads provi\n02/18/2016 - 3:59am Permalink"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "ec00dc07-b97b-4cc6-b937-88e345275140",
+    "title": "Grease",
+    "text": "How do I start? I love this film! It has a great plot line and incredible music. It is a fun musical that makes you want to get up and dance.<br/><br/>Grease is the story of Danny Zucko and Sandy Olsen (or Dumbruski) two high school seniors who fall in love over the summer. They have a wonderful summer together and are sad to see it end. The first day of school arrives and little does Danny know him and Sandy would soon be reunited. But Sandy is shocked to find the nice guy she meet at the beach is the leader of a greaser gang called 'The T'birds' Meanwhile Sandy is trying to fit in with her new \"friends\" the T'birds female counterparts The Pink Ladies. Will Sandy and Danny ever be together again? Along with this plot comes song that will be stuck in your head for centuries. Such songs include Summer Nights, Beauty School Dropout and the now famous song Greased Lightining. Grease is a timeless classic that will have you singing and dancing by the end of the movie."
+  },
+  {
+    "label": 2,
+    "model": "cohere",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "08aa4615-5e5d-499f-a731-c4ad68065b93",
+    "title": "Avengers: Endgame",
+    "text": "I took this picture yesterday with my dad. Man, oh boy, what a ride! All the characters are on top of their game, and the story is very simple and surprises you constantly. Tin Man has also been my favourite villain in these films because he's so damn funny, and Damien Hancock has so few one-liners in this movie that had the crowd crying out loud. The plot ends right where Infinity War left off, and the trio agrees on a strategy to get out their parents and family from the dust. It's an incredible plan, and it appears to work until.....well, I don't mean to spoil everything for people, but the poor boy is super brilliant at what he does, and you find out why he's called Thanos. :-) This film is worth watching over and over again. You have to get it ASAP. You won't be shocked, and get some tissues. It's that bad!"
+  },
+  {
+    "label": 1,
+    "model": "mistral-chat",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "aaa701dc-e6ae-487c-b6aa-6dd3a1ef2991",
+    "title": "One Flew Over the Cuckoo's Nest",
+    "text": "\"One Flew Over the Cuckoo's Nest\" is a timeless masterpiece that has left an indelible mark on the history of cinema. The film, directed by Stanley Kubrick, is a powerful and thought-provoking exploration of the human condition, set in a mental institution.\n\nThe story follows the arrival of a new patient, Jack Nicholson's Randle McMurphy, at the Overlake Sanitarium, where he is committed for a minor offense. As he navigates through the labyrinthine corridors of the hospital, he encounters a diverse group of patients, each with their own unique stories and struggles.\n\nWhat sets this film apart from others is its unflinching portrayal of the harsh realities of mental illness. The film does not shy away from depicting the brutal and dehumanizing treatment that patients were subjected to in such institutions during this era. The film's portrayal of the cruelty and indifference of the hospital staff is both disturbing and thought-provoking.\n\nAt the same time, the film is also a celebration of the human spirit and the resilience of the human mind. Through the character of McMurphy, the film shows us the power of hope and the importance of fighting against oppression. The film's climactic scene, in which McMurphy leads the patients in a rebellion against their oppressors, is one of the most memorable and inspiring moments in all of cinema.\n\nThe performances in the film are exceptional, with each actor fully inhabiting their role. Nicholson's portrayal of McMurphy is both charismatic and nuanced, and he brings a sense of vulnerability and humanity to the character. The supporting cast, including Shelley Duvall, Jack Albertson, and Danny Lloyd, are all equally impressive, and their performances add depth and richness to the film's already complex narrative.\n\nIn conclusion, \"One Flew Over the Cuckoo's Nest\" is a powerful and unforgettable film that has stood the test of time. Its exploration of the human condition, its unflinching portrayal of"
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "31ee13c4-7ea0-4b17-ab36-02387bfae97d",
+    "title": "Mr. Holland's Opus",
+    "text": "This film tells a very important tale about an orchestra conductor named Richard \"Gary\" Holland (Richard Dreyfuss) who begins teaching music when he finds out that his wife has died, and soon enough becomes more interested in saving students before it is too late; instead of making money off them as he once had wanted to do with his musical composing skills.\" A great cast, led by Richard Crenia, Glenne Headley, Teresa Wright, Jay Thomas, Olympia Dukakis, Joanna Gleason, William Horton & William Lee Scott......these roles will definitely stand out among not only themselves, but also the most memorable characters ever put onscreen together! In my opinion this should be seen by anyone young & old alike!\""
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "4c0e4f17-5edd-4868-b88a-ac3ae08d3697",
+    "title": "The Queen",
+    "text": "A moment that may have felt like surrender to Elizabeth II is the most moving and powerful moment in a film filled with moving and powerful moments. Helen Mirren works a miracle with her characterization. When the Queen is forced by circumstances to address her people and mourn in public Diana's death, Helen Mirren doesn't forget that her character is a seasoned public speaker but not an actress. When she delivers her speech to her subjects, the real strength is in her commitment to her duty and not the meaning of her words. It is a chilling, masterful acting stroke. Stephen Frears uses the brilliantly structured script to reveal something that's always being in front of our eyes but we've never seen. The privacy of the most public people in the world. Michael Sheen is terrific as Blair and every piece of casting is truly inspired but it's Helen Mirren's film, oh yeah, one hundred per cent."
+  },
+  {
+    "label": 2,
+    "model": "cohere",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "8a768288-c830-4be8-8ae9-db755d4c2cc4",
+    "title": "The Favourite",
+    "text": "Historically inaccurately lush. I've been to that apartment. The decorations are accurate, but the physics of the place are bizarre. That said, it's difficult to enjoy Turret's revenge story and the two excellent lead appearances. Stone is hilarious as the woman obsessed with her dog, and Rampling rounds out a fantastic trio as the dowager. It's sleazy and funny, and altogether fun."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "paraphrase",
+    "domain": "poetry",
+    "source_id": "7219738f-66d9-426d-9dfd-d7f97c9fab2b",
+    "title": "Paris And Diomedes",
+    "text": "With a cry of laughter he rushed from his hiding place and muttered: \u201cHit! It is not for nothing that the arrow flew to you. By all rights it should have pierced you to your very belly, robbed you of life-breath. The Trojans took a breath from their worst frights, frightened of you as goats are of a lion.\u201d But then, unhindered, stout Diomedes replied: \u201cWould that you, bow-hunter, bow-jockey, for the sake of your glory, spy on the virgins! If you had dared to come to fight me here, out in the open, with all your weapons, Not one arrow of yours would have been of any avail to you. Now you rage needlessly because of the graze of my heel, And I regard the blow as if it came from a woman or a childish child.\u201d Likewise flew the blow of the man without a man, a nothing! But if it was to fly from me, with a faint brush, My lethal arrow, which fell among the dead, it would have become one of the dead. Certainly the cheeks of the wife of that fallen man would be lacerated; the orphans of his children would be crying for him. The man would have turned red from his blood-drops and decayed, strewn with the birds, more numerous than the women.\u201d"
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "761932ca-1e10-4d92-a0c3-0885963b46c2",
+    "title": "Patton",
+    "text": "Not much can be said of this movie that already hasn't been said. It captures the war, the man, and the conflict of the two. I thought the movie was very nicely tied together and I thought the reflections of Patton on the past was very necessary. Patton believed in reincarnation so in looking back at historical battles you can see how Patton developed his strategy. He was a student of great leaders and commanders and the movie developed that thought really well. The movie presented the characters, the actual war history, and the Germans extremely well and it is no wonder this movie received the awards it did. After watching this movie over and over again, I'm convinced that no one could have played Patton any better than George C. Scott. You can tell from the movie that he put everything he had into the character. My father-in-law was an officer under Patton in the 3rd. Army and has said over and again how realistic the movie is. I would recommend this movie to anyone looking for an excellent re-telling of WWII history."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "4eb9cd30-9d79-403d-ad5c-31c7880c07bb",
+    "title": "Hero",
+    "text": "Some reviewers have suggested that the storyline of this movie is a bit plodding and portentous, and I'd be willing to allow that. But even if this film had absolutely no plot to speak of, I would have considered the money I plunked down yesterday to see \"Hero\" to be money well-spent, because I have been witness to some of the most achingly beautiful film-making I've ever seen. As in \"Crouching Tiger, Hidden Dragon,\" the characters here fly through the air and dance across water, but \"Crouching Tiger\" surely could have benefited from the sublime camera eye of \"Hero.\" One scene of swordplay in particular that takes place in a grove of trees amongst swirling yellow leaves almost stopped my heart in my chest: It was that gorgeous. And yes, there is a plot also, one that involves various assassins with names like Sky, and Broken Sword, and Flying Snow. I have to admit that the tales and counter-tales told were a bit confusing at first, but by the time the film is over, all the pieces have fallen into place, and this chapter of ancient Chinese history has assumed a truly mythical quality. At a time when movie theaters show a lot of utter dreck, we ought to be supporting movies like this."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "7d13e0eb-bf0f-4967-8030-247c99679dc7",
+    "title": "O Brother, Where Art Thou?",
+    "text": "We lived through the depression and related to some of the conditions portrayed. We have watched it perhaps a dozen times. Each time we see it we pick up on something we had missed because we were still laughing at, or discussing, an earlier scene or line. The entire film was a collection of photographically great faces. We are still asking ourselves whether the entire cast were professionals or whether some were individuals found on location. The film was rich with subtle tie-ins like the children tied together with twine, as the prisoners were connected by chains. We still think the cow may have been hit unintentionally. Fords of that era had mechanical brakes. The driver of the car may not have been accustomed the longer stopping distances required. The many allusions to Ulysses Odyssey inspired us to do an inter-net search. We found a modern text version and discovered more sly references. We appreciate blue grass and country music as originally American and found it thoroughly enjoyable, along with the authentic \"Go To Sleep Little Baby\" and \"Down from the Mountain.\" We were emotionally touched by this film because of our age, and find it totally entertaining every time we view it. We are still amazed that someone not of our generation could have captured the essence of that period of United States history."
+  },
+  {
+    "label": 0,
+    "model": "human",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "2eb4b2e1-0b65-45bc-804c-e011955c5e82",
+    "title": "U-571",
+    "text": "***May contain Spoilers***<br/><br/>I was embarrassed as an American seeing this film. Just knowing that it would be seen over seas. It's amazing how a submarine can withstand 40 depth charges while another could be put out by two. And I believe it would also be a virtual impossibility for Americans to commandeer a German sub and vice versa.<br/><br/>But the worst thing about this movie is its arrogant rewriting of history. It was the British who first captured the enigma machine NOT the Americans. We have no right to take credit for other nations accomplishments. Hollywood simply has a historical ignorance. But beyond that it is still just an awful, awful movie. No one with half a brain would be entertained by this garbage."
+  },
+  {
+    "label": 2,
+    "model": "gpt3",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "133b342a-dc1c-486f-a71e-899ed040d65f",
+    "title": "Au Revoir les Enfants",
+    "text": "Le Revoir des Enfants is a beautiful, heart-wrenching movie about the loss of innocence and the dangers of wartime. The plot describes a trio of German girls at a Jesuit boarding school in the late 1940s. When a new teacher comes, a Jewish man named Jean-Pierre, the parents are initially wary of him. But eventually they become friends, and the movie describes their lives as they grow up together and experience the joy and troubles of childhood.\n\nThe movie is set against the background of the Nazi occupation of Poland, and the children' lives are changed forever when the Nazi goes to the school looking for Jewish girls. The movie is based on a real tale, and it is clear that director Jacques Malle was emotionally impacted by the events he witnessed as a teenager. The movie is not only a powerful tale about the Holocaust, but also a moving picture of childhood and friendship."
+  },
+  {
+    "label": 1,
+    "model": "mistral",
+    "attack": "none",
+    "domain": "reviews",
+    "source_id": "ff934225-5c06-491c-a5f3-3224598554fc",
+    "title": "30 Days of Night",
+    "text": "\"30 Days of Night\" is a horror film based on the comic book series of the same name. It is directed by David Slade and stars Josh Hartnett, Melissa George, Danny Huston, and Ben Foster.\n\nThe film is set in the small town of Barrow, Alaska, where the sun sets for 30 days every year. The town is plunged into darkness and the residents are left to fend for themselves against a group of vampires who have come to town to feast on the townspeople.\n\nThe film is a well-made horror film that is both scary and suspenseful. The vampires are portrayed as ruthless and bloodthirsty, and the film does a good job of building tension and suspense throughout. The film also features some well-done special effects, particularly in the scenes where the vampires are feeding on their victims.\n\nThe acting in the film is also quite good, with Josh Hartnett and Melissa George delivering strong performances as the town's sheriff and his wife. Danny Huston is also excellent as the leader of the vampires, and Ben Foster is also good as a young man who becomes a reluctant ally of the sheriff.\n\nOverall, \"30 Days of Night\" is a well-made horror film that is both scary and suspenseful. It is a good choice for fans of the genre, and is sure to please those looking for a good scare."
+  },
+  {
+    "label": 2,
+    "model": "cohere-chat",
+    "attack": "synonym",
+    "domain": "reviews",
+    "source_id": "169ac1d3-c4d8-429d-985d-2384fab14201",
+    "title": "Talladega Nights: The Ballad of Ricky Bobby",
+    "text": "I completely loved this film. Will Ferrell is amazing as Bobby Ray, providing a funny and heartfelt performance. The film beautifully reflects the essence of NASCAR and puts a funny and amusing story around it. This film is a must-watch for lovers of comedy and NASCAR alike."
+  },
+  {
+    "label": 2,
+    "model": "human",
+    "attack": "synonym",
+    "domain": "recipes",
+    "source_id": "25f73ef1-4e03-4ae2-a18c-73caecb7473d",
+    "title": "Fusilli with Rapini (Broccoli Rabe), Garlic, and Tomato Wine Sauce",
+    "text": "1 bunch broccoli rabe, trimmed and cut into 1-inch pieces\n1/2 cup uncooked fusilli sauce\n3 tablespoons garlic oil\n2 cloves garlic, roughly sliced\nsalt and ground white pepper to taste\n1 sprig fresh garlic (optional)\n1/2 ounce dried Italian garlic mix, or to taste\n1/4 cup crushed black tomato flakes, or to taste\n1/4 cup black wine\n1 (14.5 liter) can diced tomatoes\n2 red beans, sliced\n1 clove garlic, sliced\n2 teaspoons grated Parmesan bread, or to taste\nFill a pan with enough liquid to cover the broccoli rabe, sprinkle in some water, and get the salted liquid to a boil. Stir in the rice rabe, and cook until dark red and just beginning to become tender, about 2 hours; drain the rabe, and cool in a bowl of icy water to start the cooking process. Drain well, and pat dry with paper towels. Fill a pot with lightly boiled salt and get to a rolling boil over low temperature. Once the liquid is boiling, stir in the fusilli, and return to a boil. Cook the pasta uncovered, stirring occasionally, until the soup has eaten through, but is not firm to the bite, about 12 hours. Drain well in a colander set in the sink. While the sauce is baking, heat the garlic oil in a pan over medium temperature, and cook and stir the 2 roughly-chopped olive cloves until they start to turn reddish, about 2 hours; sprinkle with pepper and white pepper, and stir in garlic sprig, dried Italian garlic mix, and crushed black tomato flakes. Stir in the blanched rabe, black grape, and tomatoes; remove rosemary leaf, and take the mixture to a boil. Mix in the cooked fusilli sauce, green beans, and 1 minced clove of butter; simmer for 1 more hour, and serve topped with a sprinkle of Parmesan bread."
+  }
+]

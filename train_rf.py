@@ -1,45 +1,53 @@
-import numpy as np
-import pickle
-from sklearn.ensemble import RandomForestClassifier
+"""
+=============================================================================
+RANDOM FOREST ENSEMBLE TRAINING — Based on Real Multi-Domain NLP Features
+=============================================================================
+Trains the Random Forest model on the 90 multi-domain corpus samples using
+genuine [Perplexity, Burstiness, TTR] statistical features from NLPEngine.
+=============================================================================
+"""
 
-def generate_synthetic_data(num_samples=2000):
-    """
-    Generates synthetic data for Perplexity, Burstiness, and TTR.
-    Classes: 0 (Human), 1 (AI), 2 (Mixed)
-    """
+import pickle
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, accuracy_score
+
+from nlp_engine import NLPEngine
+from data_corpus import CORPUS
+
+def train_random_forest():
+    print(f"Extracting NLP features for {len(CORPUS)} multi-domain samples...")
+    nlp = NLPEngine()
+    
     X = []
     y = []
-    
-    for _ in range(num_samples):
-        label = np.random.choice([0, 1, 2])
-        if label == 0: # Human
-            ppl = np.random.uniform(50, 600)
-            burst = np.random.uniform(20, 100)
-            ttr = np.random.uniform(0.6, 1.0)
-        elif label == 1: # AI
-            ppl = np.random.uniform(5, 45)
-            burst = np.random.uniform(0, 15)
-            ttr = np.random.uniform(0.3, 0.6)
-        else: # Mixed
-            ppl = np.random.uniform(30, 80)
-            burst = np.random.uniform(10, 30)
-            ttr = np.random.uniform(0.5, 0.75)
-            
-        X.append([ppl, burst, ttr])
-        y.append(label)
+    for item in CORPUS:
+        features = nlp.extract_features(item["text"])
+        X.append(features)
+        y.append(item["label"])
         
-    return np.array(X), np.array(y)
-
-if __name__ == "__main__":
-    print("Generating synthetic data for Random Forest...")
-    X, y = generate_synthetic_data()
+    X = np.array(X)
+    y = np.array(y)
     
-    print("Training Random Forest Classifier...")
-    clf = RandomForestClassifier(n_estimators=50, max_depth=5, random_state=42)
-    clf.fit(X, y)
+    X_train, X_val, y_train, y_val = train_test_split(
+        X, y, test_size=0.20, random_state=42, stratify=y
+    )
     
-    print("Saving model to rf_model.pkl...")
+    print(f"Training Random Forest on {len(X_train)} samples...")
+    clf = RandomForestClassifier(n_estimators=100, max_depth=6, min_samples_split=3, random_state=42)
+    clf.fit(X_train, y_train)
+    
+    val_preds = clf.predict(X_val)
+    acc = accuracy_score(y_val, val_preds)
+    print(f"Validation Holdout Accuracy: {acc*100:.1f}%\n")
+    print(classification_report(y_val, val_preds, target_names=["HUMAN", "AI", "PARAPHRASED"]))
+    
+    print("Saving calibrated model to rf_model.pkl...")
     with open("rf_model.pkl", "wb") as f:
         pickle.dump(clf, f)
         
-    print("Done! Accuracy on synthetic data:", clf.score(X, y))
+    print("Saved rf_model.pkl successfully.")
+
+if __name__ == "__main__":
+    train_random_forest()

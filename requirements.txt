@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 torch
+torchvision
 transformers
 nltk
 mlflow
@@ -17,3 +18,8 @@ PyPDF2
 python-multipart
 python-docx
 SQLAlchemy
+slowapi
+websockets
+httpx
+Pillow
+opencv-python-headless

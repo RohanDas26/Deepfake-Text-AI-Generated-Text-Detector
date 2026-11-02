@@ -8,12 +8,18 @@ env/
 venv/
 .env/
 .venv/
+.kilo/
+
+# Local Databases & Logs
+feedback.db
 
 # Machine Learning
 model.pt
 mlruns/
 mlflow.db
 inference_logs.jsonl
+scratch/
+dataset/raid_dataset_local/
 
 # Docker
 postgres_data/

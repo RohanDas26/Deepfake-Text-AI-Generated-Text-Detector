@@ -42,8 +42,24 @@
                 
                 <!-- Text Mode -->
                 <div id="textMode">
-                    <h2 class="text-xl font-semibold mb-4">Input Text</h2>
-                    <textarea id="inputText" class="w-full h-64 bg-slate-800/50 border border-slate-700 rounded-xl p-4 text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Paste your text here..."></textarea>
+                    <div class="flex justify-between items-center mb-3">
+                        <h2 class="text-xl font-semibold">Input Text</h2>
+                        <span class="text-xs text-slate-400 hover:text-white cursor-pointer transition-colors" id="clearTextBtn">Clear text</span>
+                    </div>
+
+                    <!-- Demo Presets Bar -->
+                    <div class="mb-3 p-3 bg-slate-800/40 border border-slate-700/60 rounded-xl">
+                        <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">⚡ Quick Test Scenarios (One-Click Load):</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <button type="button" class="preset-btn px-2.5 py-1 text-xs rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-red-500/50 transition-colors" data-preset="ai_essay">🎓 ChatGPT Essay</button>
+                            <button type="button" class="preset-btn px-2.5 py-1 text-xs rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-red-500/50 transition-colors" data-preset="ai_corp">💼 Corporate Outreach</button>
+                            <button type="button" class="preset-btn px-2.5 py-1 text-xs rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-emerald-500/50 transition-colors" data-preset="human_narrative">✍️ Human Memoir</button>
+                            <button type="button" class="preset-btn px-2.5 py-1 text-xs rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-emerald-500/50 transition-colors" data-preset="human_slang">💬 Casual Slang</button>
+                            <button type="button" class="preset-btn px-2.5 py-1 text-xs rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-yellow-500/50 transition-colors" data-preset="paraphrased">🔄 Paraphrased Draft</button>
+                        </div>
+                    </div>
+
+                    <textarea id="inputText" class="w-full h-56 bg-slate-800/50 border border-slate-700 rounded-xl p-4 text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none leading-relaxed" placeholder="Type, paste, or pick a Quick Scenario above..."></textarea>
                     <button id="analyzeBtn" class="mt-4 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25 active:scale-[0.98]">
                         Analyze Text
                     </button>
@@ -51,10 +67,10 @@
 
                 <!-- Document Mode -->
                 <div id="docMode" class="hidden">
-                    <h2 class="text-xl font-semibold mb-4">Upload Document (PDF/DOCX/TXT)</h2>
+                    <h2 class="text-xl font-semibold mb-4">Upload Document (PDF / DOCX / PPTX / TXT)</h2>
                     <div class="border-2 border-dashed border-slate-600 rounded-xl p-10 text-center hover:border-blue-500 transition-colors">
-                        <input type="file" id="fileInput" accept=".pdf,.txt,.docx" class="hidden" />
-                        <label for="fileInput" class="cursor-pointer text-blue-400 hover:text-blue-300 font-semibold block mb-2">Click to browse or drag file here</label>
+                        <input type="file" id="fileInput" accept=".pdf,.txt,.docx,.pptx,.ppt" class="hidden" />
+                        <label for="fileInput" class="cursor-pointer text-blue-400 hover:text-blue-300 font-semibold block mb-2">Click to browse or drag file here (PDF, DOCX, PPTX, TXT)</label>
                         <p class="text-sm text-slate-500" id="fileNameDisplay">No file selected</p>
                     </div>
                     <button id="analyzeDocBtn" class="mt-6 w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-purple-500/25 active:scale-[0.98] disabled:opacity-50" disabled>
@@ -73,16 +89,25 @@
 
                 <!-- Single Text Result -->
                 <div id="singleResultContainer">
-                    <div class="flex justify-between items-center mb-4">
+                    <div class="flex justify-between items-center mb-3">
                         <h2 class="text-xl font-semibold">Detection Result</h2>
-                        <div id="feedbackContainer" class="hidden flex items-center space-x-2 text-sm">
-                            <span class="text-slate-400">Is this correct?</span>
-                            <button id="btnCorrect" class="text-emerald-400 hover:bg-emerald-500/20 px-2 py-1 rounded transition-colors">Yes</button>
-                            <button id="btnIncorrect" class="text-red-400 hover:bg-red-500/20 px-2 py-1 rounded transition-colors">No (Flag)</button>
+                        <div class="flex items-center space-x-2">
+                            <button id="downloadCertBtn" class="hidden text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-blue-500 px-2.5 py-1 rounded-lg transition-colors flex items-center space-x-1">
+                                <span>📥</span>
+                                <span>Export Audit Report</span>
+                            </button>
+                            <div id="feedbackContainer" class="hidden flex items-center space-x-1.5 text-xs bg-slate-800/60 border border-slate-700 px-2.5 py-1 rounded-lg">
+                                <span class="text-slate-400">Accurate?</span>
+                                <button id="btnCorrect" class="text-emerald-400 hover:underline px-1">Yes</button>
+                                <span class="text-slate-600">|</span>
+                                <button id="btnIncorrect" class="text-red-400 hover:underline px-1">Flag</button>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    
+                    <div class="space-y-2.5">
                         <div id="resultBadge" class="hidden inline-block px-4 py-2 rounded-lg text-lg font-bold border"></div>
+                        <div id="actionRecommendation" class="hidden text-xs p-3 rounded-xl border leading-relaxed"></div>
                     </div>
 
                     <!-- Ensemble Comparison UI -->
@@ -104,22 +129,47 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 mt-6">
-                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
-                            <div class="text-slate-400 text-sm mb-1">Latency (ms)</div>
-                            <div id="latencyVal" class="text-2xl font-bold text-white">--</div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-3.5">
+                            <div class="text-slate-400 text-xs mb-1">Latency (ms)</div>
+                            <div id="latencyVal" class="text-xl font-bold text-white">--</div>
                         </div>
-                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
-                            <div class="text-slate-400 text-sm mb-1">Perplexity</div>
-                            <div id="pplVal" class="text-2xl font-bold text-blue-400">--</div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-3.5">
+                            <div class="text-slate-400 text-xs mb-1">Perplexity</div>
+                            <div id="pplVal" class="text-xl font-bold text-blue-400">--</div>
                         </div>
-                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
-                            <div class="text-slate-400 text-sm mb-1">Burstiness</div>
-                            <div id="burstVal" class="text-2xl font-bold text-emerald-400">--</div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-3.5">
+                            <div class="text-slate-400 text-xs mb-1">Burstiness</div>
+                            <div id="burstVal" class="text-xl font-bold text-emerald-400">--</div>
                         </div>
-                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-4">
-                            <div class="text-slate-400 text-sm mb-1">Type-Token Ratio (TTR)</div>
-                            <div id="ttrVal" class="text-2xl font-bold text-purple-400">--</div>
+                        <div class="metric-card bg-slate-800/50 border border-slate-700 rounded-xl p-3.5">
+                            <div class="text-slate-400 text-xs mb-1">Lexical Diversity (TTR)</div>
+                            <div id="ttrVal" class="text-xl font-bold text-purple-400">--</div>
+                        </div>
+                    </div>
+
+                    <!-- Linguistic Deep Diagnostics (NLP Engine) -->
+                    <div id="linguisticCard" class="hidden bg-slate-800/40 border border-slate-700/80 rounded-xl p-4 mt-4 space-y-3">
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider flex justify-between items-center">
+                            <span>🧠 Linguistic Diagnostics (NLP Subject)</span>
+                            <span class="text-slate-500 text-[10px]">Deep Feature Extraction</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 text-center">
+                            <div class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60">
+                                <div class="text-slate-400 text-[11px] mb-0.5">Emotional Tone</div>
+                                <div id="sentimentVal" class="text-sm font-bold text-white">--</div>
+                                <div class="text-[10px] text-slate-500 mt-0.5">VADER Compound</div>
+                            </div>
+                            <div class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60">
+                                <div class="text-slate-400 text-[11px] mb-0.5">Shannon Entropy</div>
+                                <div id="entropyVal" class="text-sm font-bold text-cyan-400">--</div>
+                                <div class="text-[10px] text-slate-500 mt-0.5">N-Gram Randomness</div>
+                            </div>
+                            <div class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60">
+                                <div class="text-slate-400 text-[11px] mb-0.5">Grammar Density</div>
+                                <div id="posVal" class="text-sm font-bold text-amber-400">--</div>
+                                <div class="text-[10px] text-slate-500 mt-0.5">Noun / Verb Balance</div>
+                            </div>
                         </div>
                     </div>
 
@@ -253,15 +303,13 @@
                 // Populate Ensemble UI
                 document.getElementById('ensembleComparison').classList.remove('hidden');
                 
-                // Model A (DeBERTa)
-                let debertaLabel = "Mixed/Unknown";
-                if (data.metrics.deberta_conf > 0.5) debertaLabel = data.label; // Simple heuristic for UI display
+                // Model A (DeBERTa) — use explicit label returned from server
+                const debertaLabel = data.metrics.deberta_label || data.label;
                 document.getElementById('modelADetect').textContent = debertaLabel;
                 document.getElementById('modelAConf').textContent = (data.metrics.deberta_conf * 100).toFixed(1) + '% Confidence';
                 
-                // Model B (RF)
-                let rfLabel = "Mixed/Unknown";
-                if (data.metrics.rf_conf > 0.5) rfLabel = data.label; 
+                // Model B (RF) — use explicit label returned from server
+                const rfLabel = data.metrics.rf_label || data.label;
                 document.getElementById('modelBDetect').textContent = rfLabel;
                 document.getElementById('modelBConf').textContent = (data.metrics.rf_conf * 100).toFixed(1) + '% Confidence';
 
@@ -274,6 +322,40 @@
                 document.getElementById('pplVal').textContent = data.metrics.perplexity.toFixed(2);
                 document.getElementById('burstVal').textContent = data.metrics.burstiness.toFixed(2);
                 document.getElementById('ttrVal').textContent = data.metrics.ttr.toFixed(2);
+
+                // Actionable Risk Recommendation Banner
+                const recBox = document.getElementById('actionRecommendation');
+                recBox.classList.remove('hidden');
+                if (data.label.includes("AI-GENERATED")) {
+                    recBox.className = 'text-xs p-3 rounded-xl border bg-red-500/10 border-red-500/30 text-red-300';
+                    recBox.innerHTML = '<strong>🚨 High Automation Risk:</strong> Text exhibits low perplexity and uniform syntactic flow characteristic of large language models. <em>Recommended Action: Flag for academic or editorial review.</em>';
+                } else if (data.label.includes("HUMAN")) {
+                    recBox.className = 'text-xs p-3 rounded-xl border bg-emerald-500/10 border-emerald-500/30 text-emerald-300';
+                    recBox.innerHTML = '<strong>✅ Authentic Human Signature:</strong> Natural burstiness, diverse lexical variance, and human emotional markers detected. <em>Recommended Action: Verified authentic.</em>';
+                } else {
+                    recBox.className = 'text-xs p-3 rounded-xl border bg-yellow-500/10 border-yellow-500/30 text-yellow-300';
+                    recBox.innerHTML = '<strong>⚠️ Paraphrasing / Mixed Origin Detected:</strong> Content shows signs of AI generation blended with synonym replacement or light human polishing. <em>Recommended Action: Inspect revision history.</em>';
+                }
+
+                // Linguistic Deep Diagnostics (NLP Subject)
+                const lingCard = document.getElementById('linguisticCard');
+                lingCard.classList.remove('hidden');
+
+                const sentiment = data.metrics.sentiment !== undefined ? data.metrics.sentiment : 0.0;
+                const entropy = data.metrics.entropy !== undefined ? data.metrics.entropy : 0.0;
+                const pos = data.metrics.pos || {};
+
+                let sentLabel = sentiment > 0.05 ? `Positive (+${sentiment.toFixed(2)})` : (sentiment < -0.05 ? `Negative (${sentiment.toFixed(2)})` : `Neutral (${sentiment.toFixed(2)})`);
+                document.getElementById('sentimentVal').textContent = sentLabel;
+                document.getElementById('entropyVal').textContent = entropy.toFixed(2) + ' bits';
+
+                const nnPct = Math.round((pos.NN_ratio || 0.28) * 100);
+                const vbPct = Math.round((pos.VB_ratio || 0.16) * 100);
+                document.getElementById('posVal').textContent = `N: ${nnPct}% | V: ${vbPct}%`;
+
+                // Save latest single result for report download
+                latestSingleAudit = { data, text, timestamp: new Date().toISOString() };
+                document.getElementById('downloadCertBtn').classList.remove('hidden');
 
                 const attributionBox = document.getElementById('attributionBox');
                 attributionBox.innerHTML = '';
@@ -298,6 +380,75 @@
             } finally {
                 loadingOverlay.classList.add('hidden');
             }
+        });
+
+        // PRESETS & DEMO SCENARIOS
+        const PRESETS = {
+            ai_essay: "Renewable energy plays an indispensable role in mitigating climate change. Furthermore, solar and wind power offer sustainable alternatives that reduce reliance on fossil fuels. In conclusion, transitioning to green energy ensures a resilient global economy.",
+            ai_corp: "By leveraging state-of-the-art predictive analytics, our enterprise solution streamlines operational workflows and enhances customer engagement. Consequently, businesses can unlock substantial cost savings and drive sustainable long-term revenue growth.",
+            human_narrative: "Got stuck at the train station for four hours because of some signal failure outside Kanpur. The tea stall was out of ginger biscuits, so I just sat on my luggage reading an old paperback until the rain finally stopped.",
+            human_slang: "bro ngl that last boss fight was absolute pain. died like 15 times before realizing you can literally just parry the overhead smash. totally skill issue on my part lmao",
+            paraphrased: "While cloud migration promises substantial scalability, the immediate transition costs often catch small engineering teams off guard. Although serverless architectures minimize idle compute, unexpected cold-start latencies can severely degrade API response benchmarks."
+        };
+
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const key = btn.dataset.preset;
+                if (PRESETS[key]) {
+                    document.getElementById('inputText').value = PRESETS[key];
+                }
+            });
+        });
+
+        document.getElementById('clearTextBtn').addEventListener('click', () => {
+            document.getElementById('inputText').value = '';
+        });
+
+        // AUDIT CERTIFICATE DOWNLOAD
+        let latestSingleAudit = null;
+        document.getElementById('downloadCertBtn').addEventListener('click', () => {
+            if (!latestSingleAudit) return;
+            const { data, text, timestamp } = latestSingleAudit;
+            
+            const report = `================================================================================
+AI DEEPFAKE TEXT DETECTION & LINGUISTIC AUDIT CERTIFICATE
+System: Dual-Branch DeBERTa v3 + Random Forest Ensemble
+Verification Timestamp: ${timestamp}
+================================================================================
+
+[1] EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+Final Verdict         : ${data.label}
+Confidence Score      : ${(data.confidence * 100).toFixed(1)}%
+Model A (DeBERTa v3)  : ${data.metrics.deberta_label || data.label} (${(data.metrics.deberta_conf * 100).toFixed(1)}%)
+Model B (Random Forest): ${data.metrics.rf_label || data.label} (${(data.metrics.rf_conf * 100).toFixed(1)}%)
+Processing Latency    : ${data.performance.latency_ms.toFixed(1)} ms
+
+[2] LINGUISTIC & STATISTICAL METRICS (NLP SUBJECT)
+--------------------------------------------------------------------------------
+Perplexity (DistilGPT-2): ${data.metrics.perplexity.toFixed(2)} (Threshold: <40 AI, >80 Human)
+Burstiness (Sentence σ/μ): ${data.metrics.burstiness.toFixed(2)} (Threshold: Low = AI, High = Human)
+Lexical Diversity (TTR)  : ${data.metrics.ttr.toFixed(2)}
+Emotional Tone (VADER)  : ${data.metrics.sentiment !== undefined ? data.metrics.sentiment.toFixed(2) : 'N/A'}
+Shannon Bigram Entropy  : ${data.metrics.entropy !== undefined ? data.metrics.entropy.toFixed(2) : 'N/A'} bits
+
+[3] ANALYZED TEXT CONTENT
+--------------------------------------------------------------------------------
+"${text}"
+
+================================================================================
+Generated by Multi-Modal Deepfake Detection System (Academic Project)
+================================================================================
+`;
+            const blob = new Blob([report], { type: "text/plain;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `AI_Verification_Audit_${Date.now()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         });
 
         // FEEDBACK LOGIC

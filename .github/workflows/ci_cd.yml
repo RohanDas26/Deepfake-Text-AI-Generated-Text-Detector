@@ -1,0 +1,201 @@
+# =============================================================================
+# MLOPS: GitHub Actions CI/CD Pipeline
+# =============================================================================
+#
+# This is a Continuous Integration / Continuous Deployment (CI/CD) pipeline.
+# CI/CD is a core MLOps practice. It automates:
+#
+#   CI (Continuous Integration):
+#     - Automatically runs tests every time code is pushed to GitHub
+#     - Checks code quality and catches bugs early
+#     - Validates that the Docker image builds correctly
+#
+#   CD (Continuous Deployment):
+#     - Automatically builds and pushes a Docker image to Docker Hub
+#     - Only runs on the 'main' branch after tests pass
+#     - In production, would also deploy to cloud (AWS/GCP/Azure)
+#
+# MLOps Pipeline Stages:
+#   1. Code Push -> GitHub
+#   2. GitHub Actions triggers automatically
+#   3. Install dependencies, run tests
+#   4. Build Docker image
+#   5. Push image to Docker Hub registry
+#   6. (Production) Deploy new image to cloud server
+# =============================================================================
+
+name: MLOps CI/CD Pipeline
+
+# Trigger: Run this pipeline on every push or pull request to main branch
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # ============================================================
+  # JOB 1: CI - Run Tests and Validate Code
+  # ============================================================
+  test:
+    name: "CI: Run Tests"
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python environment
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # Step 3: Cache pip dependencies (MLOps: faster builds)
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # Step 4: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio httpx slowapi
+
+      # Step 5: Run unit tests
+      - name: Run inference tests
+        run: |
+          python -m pytest test_inference.py -v --tb=short
+        env:
+          CELERY_BROKER_URL: "memory://"
+          MLFLOW_TRACKING_URI: "sqlite:///test_mlflow.db"
+
+      # Step 6: Validate NLP engine imports
+      - name: Validate NLP engine
+        run: |
+          python -c "
+          from nlp_engine import NLPEngine
+          engine = NLPEngine()
+          features = engine.extract_full_nlp_features('This is a test sentence for NLP validation.')
+          assert 'perplexity' in features
+          assert 'bigram_entropy' in features
+          assert 'sentiment_compound' in features
+          assert 'ner' in features
+          print('NLP engine validation: PASSED')
+          print(f'Features extracted: {list(features.keys())}')
+          "
+
+      # Step 7: Validate PDNN model architecture
+      - name: Validate PDNN model architecture
+        run: |
+          python -c "
+          import torch
+          from model import PDNCDualBranchNetwork
+          model = PDNCDualBranchNetwork()
+          # Check BatchNorm layers exist (PDNN requirement)
+          has_batchnorm = any(isinstance(m, torch.nn.BatchNorm1d) for m in model.modules())
+          assert has_batchnorm, 'BatchNorm1d not found in model!'
+          # Check GELU activation (used in Transformers)
+          has_gelu = any(isinstance(m, torch.nn.GELU) for m in model.modules())
+          assert has_gelu, 'GELU activation not found!'
+          print('PDNN model architecture validation: PASSED')
+          print(f'Total parameters: {sum(p.numel() for p in model.parameters()):,}')
+          "
+
+  # ============================================================
+  # JOB 2: CD - Build and Push Docker Image
+  # ============================================================
+  build-and-push:
+    name: "CD: Build & Push Docker Image"
+    runs-on: ubuntu-latest
+    needs: test  # Only runs if the 'test' job succeeds
+    if: github.ref == 'refs/heads/main'  # Only on main branch
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Log in to Docker Hub using GitHub Secrets (MLOps: secure credential management)
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Build and push the Docker image
+      # Image tag uses the git commit SHA for traceability (MLOps best practice)
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/ai-text-detector:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/ai-text-detector:${{ github.sha }}
+
+  # ============================================================
+  # JOB 3: MLOps - Model Drift Check (runs on schedule)
+  # ============================================================
+  drift-check:
+    name: "MLOps: Model Drift Detection"
+    runs-on: ubuntu-latest
+    # Scheduled drift check: runs every day at midnight
+    # In production, this would analyze inference_logs.jsonl for drift
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install monitoring dependencies
+        run: pip install pandas numpy scipy
+
+      - name: Run drift detection on inference logs
+        run: |
+          python -c "
+          import json
+          import os
+          import numpy as np
+
+          log_file = 'inference_logs.jsonl'
+          if not os.path.exists(log_file):
+              print('No inference logs found. Skipping drift check.')
+              exit(0)
+
+          logs = []
+          with open(log_file) as f:
+              for line in f:
+                  try:
+                      logs.append(json.loads(line.strip()))
+                  except:
+                      pass
+
+          if len(logs) < 2:
+              print(f'Only {len(logs)} log entries. Need more data for drift detection.')
+              exit(0)
+
+          # MLOps: Simple statistical drift check
+          # Compare perplexity distribution (first half vs second half of logs)
+          half = len(logs) // 2
+          early_ppl = [l['perplexity'] for l in logs[:half] if 'perplexity' in l]
+          recent_ppl = [l['perplexity'] for l in logs[half:] if 'perplexity' in l]
+
+          if early_ppl and recent_ppl:
+              drift_score = abs(np.mean(recent_ppl) - np.mean(early_ppl)) / (np.std(early_ppl) + 1e-8)
+              print(f'Perplexity drift score: {drift_score:.4f}')
+              if drift_score > 2.0:
+                  print('WARNING: Significant data drift detected! Consider retraining.')
+              else:
+                  print('Drift check: OK - distribution is stable.')
+          "
